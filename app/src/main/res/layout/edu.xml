@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="630dp"
+        android:backgroundTint="#0C2778" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/home"
+        android:layout_marginTop="646dp"
+        android:layout_marginLeft="116dp"/>
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/pluswo"
+        android:layout_marginTop="646dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/userw"
+        android:layout_marginTop="646dp"
+        android:layout_marginLeft="255dp"/>
+
+    <ImageView
+        android:id="@+id/imageView64"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/backarrow"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="Education"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="#246BFD"
+        android:shadowColor="#41000000"
+        android:text="Save"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/experience"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="University" />
+
+    <EditText
+        android:id="@+id/editTextText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/experience"
+        android:layout_below="@id/editTextText"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="Course" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/experience"
+        android:layout_below="@id/editTextText1"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="GPA" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/experience"
+        android:layout_below="@id/editTextText2"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="Time" />
+</RelativeLayout>
+
