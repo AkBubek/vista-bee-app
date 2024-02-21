@@ -3,8 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#F4F4F4">
+    android:background="#F4F4F4"
+    tools:context=".FifthActivity"
+   >
 
 
 
@@ -17,13 +20,15 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="58dp"
         android:fontFamily="@font/dm_sans_bold"
-        android:text="Welcome, \nExplore!"
+        android:text="Sign Up"
         android:textColor="#4A9C94"
         android:textSize="40sp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView10"
@@ -43,38 +48,53 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:backgroundTint="#FFAC41"
-        android:text="LOG IN"
+        android:text="SIGN UP"
         android:textColorLink="#FFFFFF"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="240dp"/>
 
 
-
-
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="User Name"
+        android:inputType="text"
+        android:textColor="#707070"
+        android:textColorHint="#8E8E8E"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView6"
+        android:layout_below="@id/editTextText2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:textColor="#707070"
-        android:textColorHint="#8E8E8E" />
+        android:textColorHint="#8E8E8E"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:layout_below="@id/email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="#707070"
         android:textColorHint="#8E8E8E"
-        android:hint="Password"/>
+        tools:ignore="TouchTargetSizeCheck" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
@@ -86,15 +106,15 @@
         android:textColor="#AEAEAE"
         android:textSize="18sp" />
 
-
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/google"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/google" />
 
     <TextView
         android:id="@+id/textView7"
@@ -104,7 +124,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="77dp"
         android:fontFamily="@font/dm_sans_medium"
-        android:text="No account?"
+        android:text="Have account?"
         android:textColor="#959595"
         android:textSize="20sp" />
 
@@ -116,7 +136,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="44dp"
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Register"
+        android:text="Enter"
         android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -124,13 +144,22 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         app:srcCompat="@drawable/message"
         android:layout_toLeftOf="@id/email"
-        android:layout_above="@id/imageView82"/>
+        android:layout_below="@id/imageView86"
+        android:layout_marginTop="44dp"/>
+
+    <ImageView
+        android:id="@+id/imageView86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/profile"
+        android:layout_toLeftOf="@id/editTextText2"
+        android:layout_marginTop="140dp"/>
 
     <ImageView
         android:id="@+id/imageView82"
