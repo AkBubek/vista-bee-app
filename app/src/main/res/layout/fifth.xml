@@ -25,33 +25,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"/>
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="300dp"
-        android:fontFamily="@font/dm_sans_medium"
-        android:text="Forget password?"
-        android:textColor="#959595"
-        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="350dp"
         android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="281dp"
         android:backgroundTint="#FFAC41"
         android:text="LOG IN"
-        android:textColorLink="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="240dp"/>
-
-
-
-
+        android:textAlignment="center"
+        android:textColorLink="#FFFFFF" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
@@ -75,49 +60,7 @@
         android:textColor="#707070"
         android:textColorHint="#8E8E8E"
         android:hint="Password"/>
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:text="Enter with"
-        android:layout_centerHorizontal="true"
-        android:textColor="#AEAEAE"
-        android:textSize="18sp" />
 
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/google"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"/>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="77dp"
-        android:fontFamily="@font/dm_sans_medium"
-        android:text="No account?"
-        android:textColor="#959595"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp"
-        android:fontFamily="@font/dm_sans_medium"
-        android:text="Register"
-        android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
