@@ -42,7 +42,7 @@
         android:fontFamily="@font/dm_sans_bold"
         android:text="POST"
         android:textColor="#150B3D"
-        android:textSize="28sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button7"
@@ -88,9 +88,8 @@
         android:inputType="text"
         android:hint="Job position*"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
     <EditText
         android:id="@+id/editTextText1"
         android:layout_width="wrap_content"
@@ -104,9 +103,8 @@
         android:hint="Type of workplace"
         android:layout_below="@id/editTextText"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
 
     <EditText
         android:id="@+id/editTextText2"
@@ -121,9 +119,8 @@
         android:hint="Job location"
         android:layout_below="@id/editTextText1"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="wrap_content"
@@ -137,9 +134,8 @@
         android:hint="Company"
         android:layout_below="@id/editTextText2"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
     <EditText
         android:id="@+id/editTextText4"
         android:layout_width="wrap_content"
@@ -153,9 +149,8 @@
         android:hint="Employment type"
         android:layout_below="@id/editTextText3"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
     <EditText
         android:id="@+id/editTextText5"
         android:layout_width="wrap_content"
@@ -169,9 +164,8 @@
         android:hint="Description"
         android:layout_below="@id/editTextText4"
         android:fontFamily="@font/dm_sans_bold"
-        android:backgroundTint="#150B3D"
         android:textSize="18sp"
-        android:textColorHint="#ffffff"/>
+        android:textColorHint="#150B3D"/>
 
     <ImageView
         android:id="@+id/imageView27"
