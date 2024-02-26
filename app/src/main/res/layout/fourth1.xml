@@ -42,7 +42,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/login_btn"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:backgroundTint="#FFAC41"
