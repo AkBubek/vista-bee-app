@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#F4F4F4"
     tools:context=".FifthActivity"
-   >
+    tools:ignore="ExtraText">
 
 
 
@@ -39,11 +39,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="281dp"
         android:backgroundTint="#FFAC41"
-<<<<<<< HEAD
+
         android:text="LOG IN"
         android:textAlignment="center"
-        android:textColorLink="#FFFFFF" />
-=======
+        android:textColorLink="#FFFFFF"
+    tools:ignore="MissingPrefix" />
         android:text="SIGN UP"
         android:textColorLink="#FFFFFF"
         android:layout_centerHorizontal="true"
