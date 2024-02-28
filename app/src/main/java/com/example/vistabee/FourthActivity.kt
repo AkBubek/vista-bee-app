@@ -2,6 +2,7 @@ package com.example.vistabee
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,6 +15,13 @@ class FourthActivity : AppCompatActivity() {
 
         reg_text.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        val logInBtn = findViewById<Button>(R.id.login_btn)
+
+        logInBtn.setOnClickListener{
+            val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
     }
