@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:context=".ProflePage"
+    tools:context=".ProfilePage"
     android:layout_height="wrap_content"
     android:background="#Ffffff"
     android:fillViewport="true"
@@ -109,7 +109,7 @@
             android:backgroundTint="#C5D8FF"
             android:text="Education" />
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/experienceBtn"
             android:layout_below="@id/educationBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -118,8 +118,8 @@
             android:backgroundTint="#C5D8FF"
             android:text="Experience" />
         <Button
-            android:id="@+id/button6"
-            android:layout_below="@id/button5"
+            android:id="@+id/skillsBtn"
+            android:layout_below="@id/experienceBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
@@ -128,7 +128,7 @@
             android:text="Skills" />
         <Button
             android:id="@+id/button7"
-            android:layout_below="@id/button6"
+            android:layout_below="@id/skillsBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"

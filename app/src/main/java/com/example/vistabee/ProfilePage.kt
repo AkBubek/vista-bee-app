@@ -13,10 +13,20 @@ class ProfilePage : AppCompatActivity() {
 
         // Инициализируем кнопку по ее идентификатору
         val eduBtn = findViewById<Button>(R.id.educationBtn)
+        val expBtn = findViewById<Button>(R.id.experienceBtn)
+        val sklBtn = findViewById<Button>(R.id.skillsBtn)
 
         // Назначаем обработчик нажатия кнопки
         eduBtn.setOnClickListener {
             val intent = Intent(this, EduPage::class.java)
+            startActivity(intent)
+        }
+        expBtn.setOnClickListener {
+            val intent = Intent(this, ExpPage::class.java)
+            startActivity(intent)
+        }
+        sklBtn.setOnClickListener {
+            val intent = Intent(this, SkillsPage::class.java)
             startActivity(intent)
         }
     }
