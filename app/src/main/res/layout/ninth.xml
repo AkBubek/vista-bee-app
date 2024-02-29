@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:context=".HomePage"
+    tools:context=".ProflePage"
     android:layout_height="wrap_content"
     android:background="#Ffffff"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
+    tools:layout_editor_absoluteY="1dp"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -99,7 +100,7 @@
             android:inputType="textEmailAddress" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/educationBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_below="@id/editTextText3"
@@ -109,7 +110,7 @@
             android:text="Education" />
         <Button
             android:id="@+id/button5"
-            android:layout_below="@id/button4"
+            android:layout_below="@id/educationBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
