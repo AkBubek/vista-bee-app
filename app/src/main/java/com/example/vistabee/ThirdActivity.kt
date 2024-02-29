@@ -12,7 +12,6 @@ class ThirdActivity : AppCompatActivity() {
 
         // Инициализируем кнопку по ее идентификатору
         val button = findViewById<Button>(R.id.button)
-
         // Назначаем обработчик нажатия кнопки
         button.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
