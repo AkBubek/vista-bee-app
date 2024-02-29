@@ -15,6 +15,7 @@ class ProfilePage : AppCompatActivity() {
         val eduBtn = findViewById<Button>(R.id.educationBtn)
         val expBtn = findViewById<Button>(R.id.experienceBtn)
         val sklBtn = findViewById<Button>(R.id.skillsBtn)
+        val sumBtn = findViewById<Button>(R.id.summaryBtn)
 
         // Назначаем обработчик нажатия кнопки
         eduBtn.setOnClickListener {
@@ -27,6 +28,10 @@ class ProfilePage : AppCompatActivity() {
         }
         sklBtn.setOnClickListener {
             val intent = Intent(this, SkillsPage::class.java)
+            startActivity(intent)
+        }
+        sumBtn.setOnClickListener {
+            val intent = Intent(this, SummaryPage::class.java)
             startActivity(intent)
         }
     }

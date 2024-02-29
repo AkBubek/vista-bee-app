@@ -32,6 +32,9 @@
         <activity android:name=".EduPage"/>
         <activity android:name=".ProfilePage"/>
         <activity android:name=".ExpPage"/>
+        <activity android:name=".SkillsPage"/>
+        <activity android:name=".SummaryPage"/>
+
 
 
         <meta-data

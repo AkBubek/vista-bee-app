@@ -127,7 +127,7 @@
             android:backgroundTint="#C5D8FF"
             android:text="Skills" />
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/summaryBtn"
             android:layout_below="@id/skillsBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
