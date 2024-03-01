@@ -1,9 +1,7 @@
 package com.example.vistabee
-<<<<<<< HEAD
-=======
 
 import android.app.Activity
->>>>>>> cfd0de47d8b1498a027f6b89530cd4e67c9f14be
+
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -14,10 +12,9 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<< HEAD
-=======
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
->>>>>>> cfd0de47d8b1498a027f6b89530cd4e67c9f14be
+
+
 
 class ProfilePage : AppCompatActivity() {
 
@@ -58,13 +55,10 @@ class ProfilePage : AppCompatActivity() {
             startActivity(intent)         }
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
-<<<<<<< HEAD
-            startActivity(intent)}
-=======
             startActivity(intent)
         }
 
-        imageView = findViewById(R.id.imageView70)
+        imageView  = findViewById(R.id.imageView70)
 
         // Назначаем обработчик нажатия на ImageView
         imageView.setOnClickListener {
@@ -87,7 +81,6 @@ class ProfilePage : AppCompatActivity() {
             roundedBitmapDrawable.isCircular = true
             imageView.setImageDrawable(roundedBitmapDrawable)
         }
->>>>>>> cfd0de47d8b1498a027f6b89530cd4e67c9f14be
     }
 }
 
