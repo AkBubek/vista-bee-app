@@ -1,13 +1,33 @@
 package com.example.vistabee
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 
 class ProfilePage : AppCompatActivity() {
+
+    private lateinit var imageView: ImageView
+
+    // Объявляем переменную resultLauncher как член класса
+    private val resultLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                val selectedImageUri = data?.data
+                // Устанавливаем выбранное изображение в ImageView и применяем круглую обводку
+                setRoundedImage(selectedImageUri)
+            }
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ninth)
@@ -39,6 +59,30 @@ class ProfilePage : AppCompatActivity() {
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
             startActivity(intent)
+        }
+
+        imageView = findViewById(R.id.imageView70)
+
+        // Назначаем обработчик нажатия на ImageView
+        imageView.setOnClickListener {
+            openGalleryForImage()
+        }
+    }
+
+    // Функция открытия галереи для выбора изображения
+    private fun openGalleryForImage() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        resultLauncher.launch(intent)
+    }
+
+    // Функция для установки круглой обводки
+    private fun setRoundedImage(imageUri: Uri?) {
+        imageUri?.let {
+            val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
+            val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmap)
+            roundedBitmapDrawable.isCircular = true
+            imageView.setImageDrawable(roundedBitmapDrawable)
         }
     }
 }
