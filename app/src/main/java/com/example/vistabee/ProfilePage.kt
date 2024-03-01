@@ -40,6 +40,7 @@ class ProfilePage : AppCompatActivity() {
         val sklBtn = findViewById<Button>(R.id.skillsBtn)
         val sumBtn = findViewById<Button>(R.id.summaryBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
+        val backBtn = findViewById<ImageView>(R.id.backButTonn)
 
         eduBtn.setOnClickListener {
             val intent = Intent(this, EduPage::class.java)
@@ -55,6 +56,10 @@ class ProfilePage : AppCompatActivity() {
             startActivity(intent)         }
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
+            startActivity(intent)
+        }
+        backBtn.setOnClickListener {
+            val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
 

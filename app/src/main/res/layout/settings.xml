@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
@@ -12,7 +13,7 @@
         app:srcCompat="@drawable/burg" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/settingBackBtn"
         android:layout_width="30dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/backarrow"
@@ -26,7 +27,8 @@
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="630dp"
-        android:backgroundTint="#0C2778" />
+        android:backgroundTint="#0C2778"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -194,7 +196,8 @@
         android:paddingLeft="20dp"
         android:text="Settings"
         android:textColor="#323232"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        tools:ignore="HardcodedText,NotSibling" />
 
     <TextView
         android:id="@+id/textView20"
