@@ -3,6 +3,7 @@ package com.example.vistabee
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -16,6 +17,7 @@ class ProfilePage : AppCompatActivity() {
         val expBtn = findViewById<Button>(R.id.experienceBtn)
         val sklBtn = findViewById<Button>(R.id.skillsBtn)
         val sumBtn = findViewById<Button>(R.id.summaryBtn)
+        val setBtn = findViewById<ImageView>(R.id.settingBtn)
 
         // Назначаем обработчик нажатия кнопки
         eduBtn.setOnClickListener {
@@ -32,6 +34,10 @@ class ProfilePage : AppCompatActivity() {
         }
         sumBtn.setOnClickListener {
             val intent = Intent(this, SummaryPage::class.java)
+            startActivity(intent)
+        }
+        setBtn.setOnClickListener {
+            val intent = Intent(this, SettingPage::class.java)
             startActivity(intent)
         }
     }

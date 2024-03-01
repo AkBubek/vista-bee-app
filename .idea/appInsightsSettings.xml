@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.vistabee" />
+                  <option name="mobileSdkAppId" value="1:597480566619:android:7c053dd222b0fe23a3f47e" />
+                  <option name="projectId" value="vistabeeapp" />
+                  <option name="projectNumber" value="597480566619" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
