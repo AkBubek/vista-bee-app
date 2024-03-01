@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597480566619",
+    "project_id": "vistabeeapp",
+    "storage_bucket": "vistabeeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597480566619:android:7c053dd222b0fe23a3f47e",
+        "android_client_info": {
+          "package_name": "com.example.vistabee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYC8f61O0qtyfUp4EDLbd0eiorulDYO-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

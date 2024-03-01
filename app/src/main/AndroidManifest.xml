@@ -29,6 +29,13 @@
         <activity android:name=".FourthActivity"/>
         <activity android:name=".FifthActivity"/>
         <activity android:name=".HomePage"/>
+        <activity android:name=".EduPage"/>
+        <activity android:name=".ProfilePage"/>
+        <activity android:name=".ExpPage"/>
+        <activity android:name=".SkillsPage"/>
+        <activity android:name=".SummaryPage"/>
+        <activity android:name=".SettingPage"/>
+
 
 
         <meta-data
