@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        tools:ignore="ExtraText">
         <TextView
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
@@ -44,12 +44,15 @@
 
         <ImageView
             android:id="@+id/imageView70"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="95dp"
-            app:srcCompat="@drawable/krug" />
+            android:background="@drawable/circle2"
+            android:scaleType="centerCrop"/>
+
+
         <EditText
             android:id="@+id/editTextText"
             android:layout_width="wrap_content"
@@ -59,37 +62,44 @@
             android:layout_marginTop="278dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <EditText
             android:id="@+id/editTextText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/editTextText"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <EditText
             android:id="@+id/editTextText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/editTextText1"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <EditText
             android:id="@+id/editTextText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/editTextText2"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/educationBtn"
@@ -162,10 +172,5 @@
             android:layout_marginStart="73dp"
             android:layout_marginTop="2dp"
             android:text="Email" />
-
-
-
-
-
     </RelativeLayout>
 </ScrollView>
