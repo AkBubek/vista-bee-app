@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class FourthActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fourth1)
@@ -18,11 +19,15 @@ class FourthActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         val logInBtn = findViewById<Button>(R.id.login_btn)
 
         logInBtn.setOnClickListener{
             val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
+
+
     }
 }

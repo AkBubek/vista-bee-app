@@ -29,7 +29,18 @@
         <activity android:name=".FourthActivity"/>
         <activity android:name=".FifthActivity"/>
         <activity android:name=".HomePage"/>
+<<<<<<< HEAD
         <activity android:name=".ProfilePage"/>
+=======
+        <activity android:name=".EduPage"/>
+        <activity android:name=".ProfilePage"/>
+        <activity android:name=".ExpPage"/>
+        <activity android:name=".SkillsPage"/>
+        <activity android:name=".SummaryPage"/>
+        <activity android:name=".SettingPage"/>
+
+
+>>>>>>> faecb00b7da859200cc4122f8fa10854ff9b4418
 
         <meta-data
             android:name="preloaded_fonts"
