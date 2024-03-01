@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="800dp">
         <ImageView
-            android:id="@+id/imageView46"
+            android:id="@+id/profile_picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/circle"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="19dp"
             android:layout_marginTop="18dp"
-            android:layout_toRightOf="@id/imageView46"
+            android:layout_toRightOf="@id/profile_picture"
             android:fontFamily="@font/dm_sans_medium"
             android:text="Name"
             android:textColor="#8A8A8A"
