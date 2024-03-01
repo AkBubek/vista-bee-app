@@ -15,16 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-<<<<<<< HEAD
-            android:id="@+id/profile_picture"
-=======
-            android:id="@+id/clickableprofile"
->>>>>>> faecb00b7da859200cc4122f8fa10854ff9b4418
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/circle"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"/>
+            android:id="@+id/profile_picture"
+            android:src="@drawable/circle"
+            />
 
         <TextView
             android:id="@+id/textView27"
@@ -32,11 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="19dp"
             android:layout_marginTop="18dp"
-<<<<<<< HEAD
             android:layout_toRightOf="@id/profile_picture"
-=======
-            android:layout_toRightOf="@id/clickableprofile"
->>>>>>> faecb00b7da859200cc4122f8fa10854ff9b4418
             android:fontFamily="@font/dm_sans_medium"
             android:text="Name"
             android:textColor="#8A8A8A"

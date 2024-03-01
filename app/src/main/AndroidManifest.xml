@@ -29,11 +29,8 @@
         <activity android:name=".FourthActivity"/>
         <activity android:name=".FifthActivity"/>
         <activity android:name=".HomePage"/>
-<<<<<<< HEAD
         <activity android:name=".ProfilePage"/>
-=======
         <activity android:name=".EduPage"/>
-        <activity android:name=".ProfilePage"/>
         <activity android:name=".ExpPage"/>
         <activity android:name=".SkillsPage"/>
         <activity android:name=".SummaryPage"/>
