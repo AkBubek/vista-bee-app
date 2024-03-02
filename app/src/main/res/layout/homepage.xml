@@ -78,7 +78,7 @@
             app:srcCompat="@drawable/state" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/readmorebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"

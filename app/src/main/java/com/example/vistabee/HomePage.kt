@@ -1,5 +1,6 @@
 package com.example.vistabee
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,10 +9,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class HomePage  : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
 
+        val readBtn = findViewById<Button>(R.id.readmorebtn)
+        readBtn.setOnClickListener {
+            val intent = Intent(this, ReadMore::class.java)
+            startActivity(intent)         }
 
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
 
