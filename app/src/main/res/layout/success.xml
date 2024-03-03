@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".SuccessActivity"
     android:background="#4481FD">
 
     <ImageView
@@ -33,7 +34,7 @@
         android:textSize="22sp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button8"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:backgroundTint="#246BFD"
@@ -43,7 +44,7 @@
         android:layout_marginTop="440dp"/>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button9"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"

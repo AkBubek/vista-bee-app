@@ -43,7 +43,8 @@
         <activity android:name=".SkillsPage" />
         <activity android:name=".SummaryPage" />
         <activity android:name=".SettingPage" />
-
+        <activity android:name=".SuccessActivity" />
+        <activity android:name=".FailActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
