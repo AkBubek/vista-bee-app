@@ -33,10 +33,5 @@ class HomePage  : AppCompatActivity() {
             startActivity(intent)
 
         }
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-//        val navController = navHostFragment.navController
-//
-//        findViewById<BottomNavigationView>(R.id.bottom_navigation).setupWithNavController(navController)
-
     }}
 
