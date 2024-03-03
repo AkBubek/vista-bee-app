@@ -4,37 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="240dp"
-        android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#0C2778" />
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/home"
-        android:layout_marginTop="646dp"
-        android:layout_marginLeft="116dp"/>
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/pluswo"
-        android:layout_marginTop="646dp"
-        android:layout_centerHorizontal="true"/>
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/userw"
-        android:layout_marginTop="646dp"
-        android:layout_marginLeft="255dp"/>
 
     <ImageView
         android:id="@+id/exBackBtn"
@@ -156,5 +126,15 @@
         android:shadowColor="#41000000"
         android:text="Save"
         android:textSize="20sp" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/cool"
+        app:menu="@menu/bottom_nav_menu"
+        style="@style/BottomNavigationStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:itemBackground="@drawable/bottom_nav_item_background" />
+
 
 </RelativeLayout>

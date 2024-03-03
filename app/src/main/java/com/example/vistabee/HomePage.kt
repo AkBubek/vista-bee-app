@@ -44,6 +44,7 @@ class HomePage  : AppCompatActivity() {
         imageViewGoogle.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
+
         }
-}}
+    }}
 
