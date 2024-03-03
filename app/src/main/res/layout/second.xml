@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +10,7 @@
     >
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/slide1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/gr" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/slide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -26,7 +27,7 @@
         app:srcCompat="@drawable/gr" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/slide3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

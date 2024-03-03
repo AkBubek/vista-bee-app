@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Ffffff">
+   <ScrollView
     android:layout_width="match_parent"
     tools:context=".ProfilePage"
     android:layout_height="wrap_content"
@@ -189,4 +193,15 @@
             app:srcCompat="@drawable/arrow" />
 
     </RelativeLayout>
-</ScrollView>
+  </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/cool"
+        app:menu="@menu/bottom_nav_menu"
+        style="@style/BottomNavigationStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:itemBackground="@drawable/bottom_nav_item_background" />
+
+</RelativeLayout>
