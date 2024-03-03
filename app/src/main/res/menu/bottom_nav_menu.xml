@@ -3,23 +3,18 @@
 
         <item
             android:id="@+id/navigation_home"
-            android:icon="@drawable/menuhome"
-            android:title="Home" />
+            android:icon="@drawable/menuhome"/>
         <item
             android:id="@+id/navigation_dashboard"
-            android:icon="@drawable/menuuser"
-            android:title="User" />
+            android:icon="@drawable/menuuser"/>
         <item
             android:id="@+id/navigation_plus"
-            android:icon="@drawable/menuplus"
-            android:title="Plus" />
+            android:icon="@drawable/menuplus" />
         <item
             android:id="@+id/navigation_message"
-            android:icon="@drawable/menumessage"
-            android:title="Message" />
+            android:icon="@drawable/menumessage" />
         <item
             android:id="@+id/navigation_notifications"
-            android:icon="@drawable/menubell"
-            android:title="Notifications" />
+            android:icon="@drawable/menubell" />
 
 </menu>

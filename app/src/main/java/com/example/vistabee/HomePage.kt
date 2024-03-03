@@ -31,6 +31,12 @@ class HomePage  : AppCompatActivity() {
         imageViewGoogle.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
+
         }
-}}
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        findViewById<BottomNavigationView>(R.id.bottom_navigation).setupWithNavController(navController)
+
+    }}
 

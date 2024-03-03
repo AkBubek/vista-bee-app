@@ -231,14 +231,17 @@ android:background="#Ffffff">
 
 </ScrollView>
 
-<!-- Bottom Navigation View -->
-<com.google.android.material.bottomnavigation.BottomNavigationView
-    android:background="#246BFD"
-    android:id="@+id/bottom_navigation"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    app:menu="@menu/bottom_nav_menu" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/cool"
+        app:menu="@menu/bottom_nav_menu"
+        style="@style/BottomNavigationStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:itemBackground="@drawable/bottom_nav_item_background" />
+
 
 </RelativeLayout>
 
