@@ -2,6 +2,7 @@ package com.example.vistabee
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -25,5 +26,11 @@ class HomePage  : AppCompatActivity() {
             val intent = Intent(this, ProfilePage::class.java)
             startActivity(intent)
     }
+        val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
+
+        imageViewGoogle.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
+            startActivity(intent)
+        }
 }}
 

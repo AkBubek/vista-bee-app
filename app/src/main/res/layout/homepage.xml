@@ -208,6 +208,14 @@
             app:srcCompat="@drawable/pintrest"
             android:layout_marginBottom="40dp"/>
 
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="345dp"
+            app:srcCompat="@drawable/google" />
+
 
         <!--        <EditText-->
 <!--            android:id="@+id/editTextText"-->
