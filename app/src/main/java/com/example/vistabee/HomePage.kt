@@ -8,6 +8,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomePage  : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -33,10 +36,10 @@ class HomePage  : AppCompatActivity() {
             startActivity(intent)
 
         }
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
-
-        findViewById<BottomNavigationView>(R.id.bottom_navigation).setupWithNavController(navController)
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+//        val navController = navHostFragment.navController
+//
+//        findViewById<BottomNavigationView>(R.id.bottom_navigation).setupWithNavController(navController)
 
     }}
 
