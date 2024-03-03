@@ -168,7 +168,8 @@
             android:text="Download PDF File"
             android:layout_below="@id/btnChooseFile"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"/>
 
 
         <TextView
