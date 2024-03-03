@@ -17,6 +17,12 @@
         android:theme="@style/Theme.VistaBee"
         tools:targetApi="31">
         <activity
+            android:name=".Remote1"
+            android:exported="false" />
+        <activity
+            android:name=".Fulltime"
+            android:exported="false" />
+        <activity
             android:name=".ReadMore"
             android:exported="false" />
         <activity
@@ -41,7 +47,6 @@
         <activity android:name=".SkillsPage" />
         <activity android:name=".SummaryPage" />
         <activity android:name=".SettingPage" />
-
 
         <meta-data
             android:name="preloaded_fonts"

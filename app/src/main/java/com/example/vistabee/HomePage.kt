@@ -20,6 +20,19 @@ class HomePage  : AppCompatActivity() {
             val intent = Intent(this, ReadMore::class.java)
             startActivity(intent)         }
 
+        val fullbtn = findViewById<ImageView>(R.id.fulltimebtn)
+        fullbtn.setOnClickListener{
+            val intent = Intent(this, Fulltime::class.java)
+            startActivity(intent)
+        }
+
+        val rembtn = findViewById<ImageView>(R.id.remotebtn)
+        rembtn.setOnClickListener{
+            val intent = Intent(this, Remote1::class.java)
+            startActivity(intent)
+        }
+
+
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
 
         profilePicture.setOnClickListener{

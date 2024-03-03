@@ -148,6 +148,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="36dp"
                     android:src="@drawable/clickable" />
+
             </LinearLayout>
 
 
@@ -215,6 +216,22 @@
             android:layout_marginVertical="10dp"
             android:layout_marginLeft="345dp"
             app:srcCompat="@drawable/google" />
+
+        <ImageView
+            android:id="@+id/fulltimebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="644dp"
+            android:layout_marginLeft="105dp"
+            app:srcCompat="@drawable/fulltime" />
+
+        <ImageView
+            android:id="@+id/remotebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="645dp"
+            android:layout_marginLeft="184dp"
+            app:srcCompat="@drawable/remote" />
 
 
         <!--        <EditText-->
