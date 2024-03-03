@@ -54,4 +54,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
+    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+
 }

@@ -88,27 +88,6 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:text="Enter with"
-        android:layout_centerHorizontal="true"
-        android:textColor="#AEAEAE"
-        android:textSize="18sp" />
-
-    <ImageButton
-        android:id="@+id/imageView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/google" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
