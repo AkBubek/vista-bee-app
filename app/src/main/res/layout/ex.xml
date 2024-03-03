@@ -37,7 +37,7 @@
         android:layout_marginLeft="255dp"/>
 
     <ImageView
-        android:id="@+id/imageView64"
+        android:id="@+id/exBackBtn"
         android:layout_width="30dp"
         android:layout_height="20dp"
         app:srcCompat="@drawable/backarrow"

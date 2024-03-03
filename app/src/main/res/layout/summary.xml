@@ -39,7 +39,7 @@
         android:layout_marginLeft="255dp"/>
 
     <ImageView
-        android:id="@+id/imageView64"
+        android:id="@+id/sumBackBtn"
         android:layout_width="30dp"
         android:layout_height="20dp"
         app:srcCompat="@drawable/backarrow"
@@ -52,18 +52,25 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sum"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"/>
-
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="120dp" />
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="260dp"
+        android:layout_height="330dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        android:hint="Write about yourself..."
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Write about yourself..."
-        android:textColor="#A2BEF4"
-        android:textSize="16sp" />
+        android:textColorHint="#A2BEF4"
+        android:textSize="16sp"
+        android:background="@null"
+        android:gravity="top" />
+
 
     <TextView
         android:id="@+id/textView42"
