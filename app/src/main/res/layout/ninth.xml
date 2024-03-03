@@ -34,11 +34,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
             app:srcCompat="@drawable/ava" />
+
         <ImageView
             android:id="@+id/settingBtn"
-            android:layout_width="36dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="70dp"
+            android:layout_width="47sp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="290dp"
             android:layout_marginTop="60dp"
             app:srcCompat="@drawable/setnet" />
 
@@ -64,6 +65,7 @@
             android:background="@drawable/main"
             android:ems="10"
             android:inputType="text"
+            android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -76,6 +78,7 @@
             android:background="@drawable/main"
             android:ems="10"
             android:inputType="text"
+            android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -88,6 +91,7 @@
             android:background="@drawable/main"
             android:ems="10"
             android:inputType="number"
+            android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -100,6 +104,7 @@
             android:background="@drawable/main"
             android:ems="10"
             android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -173,5 +178,15 @@
             android:layout_marginStart="73dp"
             android:layout_marginTop="2dp"
             android:text="Email" />
+
+        <ImageView
+            android:id="@+id/backButTonn"
+            android:layout_width="49dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="60dp"
+            android:rotationY="181"
+            app:srcCompat="@drawable/arrow" />
+
     </RelativeLayout>
 </ScrollView>

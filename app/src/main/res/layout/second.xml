@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="@font/dm_sans_bold"
-        android:text="Search For Your Ideal Job"
+        android:text="Search For Your \nIdeal Job"
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
 

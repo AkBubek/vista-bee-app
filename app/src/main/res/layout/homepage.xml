@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#Ffffff">
+
+<ScrollView
     android:layout_width="match_parent"
-    tools:context=".HomePage"
-    android:layout_height="wrap_content"
-    android:background="#Ffffff"
+    android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
-
-
+    android:layout_above="@id/bottom_navigation">
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/profile_picture"
-            android:src="@drawable/circle"
-            />
+            android:layout_width="104dp"
+            android:layout_height="108dp"
+            android:background="@drawable/circle2" />
 
         <TextView
             android:id="@+id/textView27"
@@ -78,7 +77,7 @@
             app:srcCompat="@drawable/state" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/readmorebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -126,7 +125,8 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="490dp">
+            android:layout_marginTop="490dp"
+            tools:ignore="SpeakableTextPresentCheck">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -139,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dp"
                     android:src="@drawable/clickable" />
+
                 <ImageView
                     android:id="@+id/imageViewClick1"
                     android:layout_width="wrap_content"
@@ -206,16 +207,41 @@
             app:srcCompat="@drawable/pintrest"
             android:layout_marginBottom="40dp"/>
 
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="345dp"
+            app:srcCompat="@drawable/google" />
+
 
         <!--        <EditText-->
-<!--            android:id="@+id/editTextText"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/experience"-->
-<!--            android:ems="10"-->
-<!--            android:hint="University"-->
-<!--            android:inputType="text" />-->
-
+        <!--            android:id="@+id/editTextText"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/experience"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="University"-->
+        <!--            android:inputType="text" />-->
 
     </RelativeLayout>
+
+
+
 </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/cool"
+        app:menu="@menu/bottom_nav_menu"
+        style="@style/BottomNavigationStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:itemBackground="@drawable/bottom_nav_item_background" />
+
+
+</RelativeLayout>
+

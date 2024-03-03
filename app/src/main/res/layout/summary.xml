@@ -6,40 +6,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SummaryPage">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="240dp"
-        android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#0C2778" />
+
 
     <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/home"
-        android:layout_marginTop="646dp"
-        android:layout_marginLeft="116dp"/>
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/pluswo"
-        android:layout_marginTop="646dp"
-        android:layout_centerHorizontal="true"/>
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/userw"
-        android:layout_marginTop="646dp"
-        android:layout_marginLeft="255dp"/>
-
-    <ImageView
-        android:id="@+id/imageView64"
+        android:id="@+id/sumBackBtn"
         android:layout_width="30dp"
         android:layout_height="20dp"
         app:srcCompat="@drawable/backarrow"
@@ -52,18 +22,25 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sum"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"/>
-
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="120dp" />
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="260dp"
+        android:layout_height="330dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        android:hint="Write about yourself..."
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Write about yourself..."
-        android:textColor="#A2BEF4"
-        android:textSize="16sp" />
+        android:textColorHint="#A2BEF4"
+        android:textSize="16sp"
+        android:background="@null"
+        android:gravity="top" />
+
 
     <TextView
         android:id="@+id/textView42"
@@ -86,6 +63,16 @@
         android:shadowColor="#41000000"
         android:text="Save"
         android:textSize="20sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/cool"
+        app:menu="@menu/bottom_nav_menu"
+        style="@style/BottomNavigationStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:itemBackground="@drawable/bottom_nav_item_background" />
 
 
 </RelativeLayout>
