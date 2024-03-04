@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3F3F3"
     tools:context=".Remote1">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="404dp"
+        android:layout_height="723dp"
+        app:srcCompat="@drawable/frame11"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="4dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
