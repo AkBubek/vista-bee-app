@@ -78,26 +78,10 @@
         android:textColor="#707070"
         android:textColorHint="#8E8E8E"
         tools:ignore="TouchTargetSizeCheck" />
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:text="Enter with"
-        android:layout_centerHorizontal="true"
-        android:textColor="#AEAEAE"
-        android:textSize="18sp" />
 
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/google"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"/>
+
+
 
     <TextView
         android:id="@+id/textView7"

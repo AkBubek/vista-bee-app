@@ -58,6 +58,7 @@
             android:scaleType="centerCrop"/>
 
 
+
         <EditText
             android:id="@+id/editTextText"
             android:layout_width="wrap_content"
@@ -137,6 +138,9 @@
             android:layout_marginTop="35dp"
             android:backgroundTint="#C5D8FF"
             android:text="Skills" />
+
+
+
         <Button
             android:id="@+id/summaryBtn"
             android:layout_below="@id/skillsBtn"
@@ -147,6 +151,25 @@
             android:backgroundTint="#C5D8FF"
             android:text="Summary"
             android:layout_marginBottom="40dp"/>
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/summaryBtn"
+            android:text="Choose PDF File"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnDownloadFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download PDF File"
+            android:layout_below="@id/btnChooseFile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="90dp"/>
 
 
         <TextView
@@ -190,6 +213,7 @@
             android:layout_marginTop="60dp"
             android:rotationY="181"
             app:srcCompat="@drawable/arrow" />
+
 
     </RelativeLayout>
   </ScrollView>

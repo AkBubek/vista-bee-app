@@ -28,28 +28,28 @@ class FourthActivity : AppCompatActivity() {
         val userEmail : TextInputEditText = findViewById(R.id.email_auth)
         val userPassword : EditText = findViewById(R.id.password_auth)
 
-        logInBtn.setOnClickListener{
-            val intent = Intent(this, HomePage::class.java)
+        logInBtn.setOnClickListener {
             val email = userEmail.text.toString().trim()
             val password = userPassword.text.toString().trim()
 
-
-            if( email == "" || password == "")
-                Toast.makeText(this, "One or more fields are empty please check again", Toast.LENGTH_LONG).show()
-            else{
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "One or more fields are empty, please check again", Toast.LENGTH_LONG).show()
+            } else {
                 val db = DbHelper(this, null)
                 val isAuth = db.getUser(email, password)
 
-                if(isAuth){
+                if (isAuth) {
                     Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
                     userEmail.text?.clear()
                     userPassword.text.clear()
-                    startActivity(intent)
-                } else
+                    startActivity(Intent(this, SuccessActivity::class.java))
+                } else {
                     Toast.makeText(this, "User $email not found", Toast.LENGTH_LONG).show()
-
+                    startActivity(Intent(this, FailActivity::class.java))
+                }
             }
         }
+
 
     }
 }

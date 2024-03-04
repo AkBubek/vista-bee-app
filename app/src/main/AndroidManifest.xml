@@ -5,6 +5,8 @@
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -47,6 +49,11 @@
         <activity android:name=".SkillsPage" />
         <activity android:name=".SummaryPage" />
         <activity android:name=".SettingPage" />
+<<<<<<< HEAD
+=======
+        <activity android:name=".SuccessActivity" />
+        <activity android:name=".FailActivity" />
+>>>>>>> 278512ebbbcb11ae42e78b3ac596712f7b096ee1
 
         <meta-data
             android:name="preloaded_fonts"

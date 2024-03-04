@@ -69,6 +69,16 @@ class ProfilePage : AppCompatActivity() {
         imageView.setOnClickListener {
             openGalleryForImage()
         }
+
+
+        val btnChooseFile: Button = findViewById(R.id.btnChooseFile)
+        btnChooseFile.setOnClickListener {
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/pdf"
+            }
+            startActivityForResult(intent, REQUEST_CODE_PICK_PDF)
+        }
     }
 
     // Функция открытия галереи для выбора изображения
@@ -87,5 +97,20 @@ class ProfilePage : AppCompatActivity() {
             imageView.setImageDrawable(roundedBitmapDrawable)
         }
     }
+
+    private val REQUEST_CODE_PICK_PDF = 1
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_PICK_PDF && resultCode == Activity.RESULT_OK) {
+            data?.data?.let { uri ->
+                // Upload the file using the uri
+                // Example: UploadFileTask().execute(uri)
+            }
+        }
+    }
+
+
 }
 
