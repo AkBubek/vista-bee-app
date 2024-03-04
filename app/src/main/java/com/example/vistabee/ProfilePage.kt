@@ -1,7 +1,6 @@
 package com.example.vistabee
 
 import android.app.Activity
-
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -14,19 +13,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 
-
-
 class ProfilePage : AppCompatActivity() {
 
     private lateinit var imageView: ImageView
 
-    // Объявляем переменную resultLauncher как член класса
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val data: Intent? = result.data
                 val selectedImageUri = data?.data
-                // Устанавливаем выбранное изображение в ImageView и применяем круглую обводку
                 setRoundedImage(selectedImageUri)
             }
         }
@@ -44,16 +39,20 @@ class ProfilePage : AppCompatActivity() {
 
         eduBtn.setOnClickListener {
             val intent = Intent(this, EduPage::class.java)
-            startActivity(intent)         }
+            startActivity(intent)
+        }
         expBtn.setOnClickListener {
             val intent = Intent(this, ExpPage::class.java)
-            startActivity(intent)         }
+            startActivity(intent)
+        }
         sklBtn.setOnClickListener {
             val intent = Intent(this, SkillsPage::class.java)
-            startActivity(intent)         }
+            startActivity(intent)
+        }
         sumBtn.setOnClickListener {
             val intent = Intent(this, SummaryPage::class.java)
-            startActivity(intent)         }
+            startActivity(intent)
+        }
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
             startActivity(intent)
@@ -63,13 +62,10 @@ class ProfilePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        imageView  = findViewById(R.id.imageView70)
-
-        // Назначаем обработчик нажатия на ImageView
+        imageView = findViewById(R.id.imageView70)
         imageView.setOnClickListener {
             openGalleryForImage()
         }
-
 
         val btnChooseFile: Button = findViewById(R.id.btnChooseFile)
         btnChooseFile.setOnClickListener {
@@ -79,27 +75,48 @@ class ProfilePage : AppCompatActivity() {
             }
             startActivityForResult(intent, REQUEST_CODE_PICK_PDF)
         }
+
+        // Загрузка изображения профиля при создании страницы
+        val profileImageUri = loadProfileImage()
+        if (profileImageUri != null) {
+            setRoundedImage(profileImageUri)
+        }
     }
 
-    // Функция открытия галереи для выбора изображения
     private fun openGalleryForImage() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "image/*"
         resultLauncher.launch(intent)
     }
 
-    // Функция для установки круглой обводки
     private fun setRoundedImage(imageUri: Uri?) {
         imageUri?.let {
+            saveProfileImageUri(it)
             val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
-            val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmap)
+            val roundedBitmapDrawable =
+                RoundedBitmapDrawableFactory.create(resources, bitmap)
             roundedBitmapDrawable.isCircular = true
             imageView.setImageDrawable(roundedBitmapDrawable)
         }
     }
 
-    private val REQUEST_CODE_PICK_PDF = 1
+    private fun saveProfileImageUri(imageUri: Uri?) {
+        imageUri?.let {
+            val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            with(sharedPref.edit()) {
+                putString("profile_image_uri", it.toString())
+                apply()
+            }
+        }
+    }
 
+    private fun loadProfileImage(): Uri? {
+        val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val savedUriString = sharedPref.getString("profile_image_uri", null)
+        return savedUriString?.let { Uri.parse(it) }
+    }
+
+    private val REQUEST_CODE_PICK_PDF = 1
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -110,7 +127,4 @@ class ProfilePage : AppCompatActivity() {
             }
         }
     }
-
-
 }
-

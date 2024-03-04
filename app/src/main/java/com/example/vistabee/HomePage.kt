@@ -16,14 +16,14 @@ class HomePage : AppCompatActivity() {
         setContentView(R.layout.homepage)
 
         val navView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
-        navView.setOnItemSelectedListener  { menuItem ->
+        navView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_home -> {
-                     val intent = Intent(this, HomePage::class.java)
-                     startActivity(intent)
+                    // Переход на домашнюю страницу (HomePage)
                     true
                 }
                 R.id.navigation_dashboard -> {
+                    // Переход на страницу профиля (ProfilePage)
                     val intent = Intent(this, ProfilePage::class.java)
                     startActivity(intent)
                     true
@@ -67,8 +67,7 @@ class HomePage : AppCompatActivity() {
 
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
         profilePicture.setOnClickListener {
-            val intent = Intent(this, ProfilePage::class.java)
-            startActivity(intent)
+            openGalleryForImage() // Добавленная функция для открытия галереи
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
@@ -76,6 +75,22 @@ class HomePage : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
         }
+
+        // Загрузка изображения профиля
+        val profileImageUri = loadProfileImage()
+        if (profileImageUri != null) {
+            profilePicture.setImageURI(profileImageUri)
+        }
+    }
+
+    // Функция для открытия галереи для выбора изображения профиля
+    private fun openGalleryForImage() {
+        // Реализация открытия галереи здесь
+    }
+
+    // Функция для загрузки изображения профиля
+    private fun loadProfileImage(): Uri? {
+        // Реализация загрузки изображения профиля здесь
+        return null // Пример возврата null, замените на вашу реализацию
     }
 }
-
