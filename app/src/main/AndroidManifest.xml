@@ -49,11 +49,11 @@
         <activity android:name=".SkillsPage" />
         <activity android:name=".SummaryPage" />
         <activity android:name=".SettingPage" />
-<<<<<<< HEAD
-=======
+<!--<<<<<<< HEAD-->
+<!--=======-->
         <activity android:name=".SuccessActivity" />
         <activity android:name=".FailActivity" />
->>>>>>> 278512ebbbcb11ae42e78b3ac596712f7b096ee1
+<!--&gt;>>>>>> 278512ebbbcb11ae42e78b3ac596712f7b096ee1-->
 
         <meta-data
             android:name="preloaded_fonts"
