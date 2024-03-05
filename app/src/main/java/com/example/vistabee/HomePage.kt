@@ -67,8 +67,13 @@ class HomePage : AppCompatActivity() {
 
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
         profilePicture.setOnClickListener {
+<<<<<<< HEAD
             val intent = Intent(this@HomePage, ProfilePage::class.java)
             startActivity(intent)
+=======
+            val intent = Intent(this, ProfilePage::class.java)
+            startActivity(intent) // Добавленная функция для открытия галереи
+>>>>>>> cdeca41fa309ed91e34f3e075ea37ba295f1e27d
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
