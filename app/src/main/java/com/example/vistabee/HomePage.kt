@@ -67,7 +67,8 @@ class HomePage : AppCompatActivity() {
 
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
         profilePicture.setOnClickListener {
-            openGalleryForImage() // Добавленная функция для открытия галереи
+            val intent = Intent(this@HomePage, ProfilePage::class.java)
+            startActivity(intent)
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
@@ -76,21 +77,14 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Загрузка изображения профиля
         val profileImageUri = loadProfileImage()
         if (profileImageUri != null) {
             profilePicture.setImageURI(profileImageUri)
         }
     }
 
-    // Функция для открытия галереи для выбора изображения профиля
-    private fun openGalleryForImage() {
-        // Реализация открытия галереи здесь
-    }
 
-    // Функция для загрузки изображения профиля
     private fun loadProfileImage(): Uri? {
-        // Реализация загрузки изображения профиля здесь
-        return null // Пример возврата null, замените на вашу реализацию
+        return null
     }
 }

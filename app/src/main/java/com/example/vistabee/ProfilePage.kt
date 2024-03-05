@@ -1,5 +1,6 @@
 package com.example.vistabee
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
@@ -26,6 +27,7 @@ class ProfilePage : AppCompatActivity() {
             }
         }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ninth)
@@ -36,6 +38,7 @@ class ProfilePage : AppCompatActivity() {
         val sumBtn = findViewById<Button>(R.id.summaryBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
         val backBtn = findViewById<ImageView>(R.id.backButTonn)
+        val profBtn = findViewById<ImageView>(R.id.profile_picture)
 
         eduBtn.setOnClickListener {
             val intent = Intent(this, EduPage::class.java)
@@ -59,6 +62,10 @@ class ProfilePage : AppCompatActivity() {
         }
         backBtn.setOnClickListener {
             val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+        profBtn.setOnClickListener {
+            val intent = Intent(this, ProfilePage::class.java)
             startActivity(intent)
         }
 
