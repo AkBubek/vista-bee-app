@@ -2,4 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph" />
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/getActivity">
+    <activity
+        android:id="@+id/getActivity"
+        android:name="GetActivity"
+        android:label="GetActivity" />
+</navigation>

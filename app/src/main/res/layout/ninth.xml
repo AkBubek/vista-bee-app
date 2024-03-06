@@ -8,7 +8,6 @@
     android:background="#Ffffff">
    <ScrollView
     android:layout_width="match_parent"
-    tools:context=".ProfilePage"
     android:layout_height="wrap_content"
     android:background="#Ffffff"
     android:fillViewport="true"
