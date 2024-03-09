@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,38 +15,6 @@ class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
-
-        val navView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
-        navView.setOnItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.navigation_home -> {
-                    // Переход на домашнюю страницу (HomePage)
-                    true
-                }
-                R.id.navigation_dashboard -> {
-                    // Переход на страницу профиля (ProfilePage)
-                    val intent = Intent(this, ProfilePage::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.navigation_plus -> {
-                    val intent = Intent(this, ProfilePage::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.navigation_message -> {
-                    // Обработка нажатия на элемент "Notifications"
-                    // Переход на нужную страницу
-                    true
-                }
-                R.id.navigation_notifications -> {
-                    // Обработка нажатия на элемент "Notifications"
-                    // Переход на нужную страницу
-                    true
-                }
-                else -> false
-            }
-        }
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
         readBtn.setOnClickListener {
@@ -67,13 +36,7 @@ class HomePage : AppCompatActivity() {
 
         val profilePicture = findViewById<ImageView>(R.id.profile_picture)
         profilePicture.setOnClickListener {
-<<<<<<< HEAD
-            val intent = Intent(this@HomePage, ProfilePage::class.java)
-            startActivity(intent)
-=======
-            val intent = Intent(this, ProfilePage::class.java)
-            startActivity(intent) // Добавленная функция для открытия галереи
->>>>>>> cdeca41fa309ed91e34f3e075ea37ba295f1e27d
+            startActivity(Intent(this, test::class.java))
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)

@@ -29,6 +29,7 @@ class FourthActivity : AppCompatActivity() {
         val userPassword : EditText = findViewById(R.id.password_auth)
 
         logInBtn.setOnClickListener {
+            val intent = Intent(this, HomePage::class.java)
             val email = userEmail.text.toString().trim()
             val password = userPassword.text.toString().trim()
 
@@ -42,10 +43,11 @@ class FourthActivity : AppCompatActivity() {
                     Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
                     userEmail.text?.clear()
                     userPassword.text.clear()
-                    startActivity(Intent(this, SuccessActivity::class.java))
+//                    startActivity(Intent(this, SuccessActivity::class.java))
+                    startActivity(intent)
                 } else {
                     Toast.makeText(this, "User $email not found", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this, FailActivity::class.java))
+//                    startActivity(Intent(this, FailActivity::class.java))
                 }
             }
         }

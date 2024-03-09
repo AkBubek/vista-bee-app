@@ -74,20 +74,7 @@ class ProfilePage : AppCompatActivity() {
             openGalleryForImage()
         }
 
-        val btnChooseFile: Button = findViewById(R.id.btnChooseFile)
-        btnChooseFile.setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/pdf"
-            }
-            startActivityForResult(intent, REQUEST_CODE_PICK_PDF)
-        }
 
-        // Загрузка изображения профиля при создании страницы
-        val profileImageUri = loadProfileImage()
-        if (profileImageUri != null) {
-            setRoundedImage(profileImageUri)
-        }
     }
 
     private fun openGalleryForImage() {
