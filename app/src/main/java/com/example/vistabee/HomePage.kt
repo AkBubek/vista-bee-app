@@ -36,13 +36,10 @@ class HomePage : AppCompatActivity() {
 
         val profilePicture = findViewById<ImageView>(R.id.profileP)
         profilePicture.setOnClickListener {
-<<<<<<< HEAD
-            startActivity(Intent(this, test::class.java))
-=======
+            startActivity(Intent(this, ProfilePage::class.java))
             val intent = Intent(this,ProfilePage::class.java)
             startActivity(intent)
 
->>>>>>> d5e2477dcd4395da5164ac53212c64877501af6f
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)

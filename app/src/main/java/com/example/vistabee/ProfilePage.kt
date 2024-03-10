@@ -70,6 +70,7 @@ class ProfilePage : AppCompatActivity() {
             openGalleryForImage()
         }
 
+        loadProfileImage()
 
     }
 
