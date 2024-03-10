@@ -64,7 +64,7 @@ class ProfilePage : AppCompatActivity() {
             val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
-//
+
         imageView = findViewById(R.id.imageView70)
         imageView.setOnClickListener {
             openGalleryForImage()
@@ -113,8 +113,10 @@ class ProfilePage : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_PICK_PDF && resultCode == Activity.RESULT_OK) {
             data?.data?.let { uri ->
-                // Upload the file using the uri
-                // Example: UploadFileTask().execute(uri)
+                // Выбранный файл PDF доступен по uri
+                // Вы можете выполнить нужные действия с этим файлом здесь
+                // Например, загрузка на сервер, обработка содержимого файла и т.д.
+                // Просто добавьте нужный код для работы с выбранным файлом
             }
         }
     }
