@@ -34,26 +34,27 @@ class DbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
     fun getUser(email: String, password: String) : Boolean{
         val db = this.readableDatabase
 
-        val result = db.rawQuery("SELECT  * FROM users WHERE email = '$email' AND password = '$password'", null)
+        val result = db.rawQuery("SELECT * FROM users WHERE email = ? AND password = ?", arrayOf(email, password))
         return result.moveToFirst()
     }
 
-    @SuppressLint("Range")
-    fun getUserNames(): List<String> {
-        val userList = mutableListOf<String>()
-        val db = this.readableDatabase
 
-        val query = "SELECT login FROM users"
-        val cursor = db.rawQuery(query, null)
 
-        cursor.use {
-            while (it.moveToNext()) {
-                val userName = it.getString(it.getColumnIndex("login"))
-                userList.add(userName)
-            }
+    fun getUserName(email: String?): String? {
+        if (email.isNullOrEmpty()) {
+            return null // Возвращаем null, если email пуст или null
         }
 
-        return userList
+        val db = this.readableDatabase
+        var userName: String? = null
+        val cursor = db.rawQuery("SELECT login FROM users WHERE email = ?", arrayOf(email))
+        cursor.use {
+            if (it.moveToFirst()) {
+                userName = it.getString(it.getColumnIndex("login"))
+            }
+        }
+        return userName
     }
+
 
 }

@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -23,6 +24,21 @@ class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
+
+        val userNameTextView = findViewById<TextView>(R.id.userName)
+
+// Получаем электронную почту из Intent
+        val userEmail = intent.getStringExtra("bazar@gmail.com")
+
+// Создаем экземпляр DbHelper для работы с базой данных
+        val dbHelper = DbHelper(this, null)
+
+// Получаем имя пользователя из базы данных, используя электронную почту
+        val userName = dbHelper.getUserName(userEmail)
+
+// Устанавливаем имя пользователя в TextView
+        userNameTextView.text = userName
+
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
         readBtn.setOnClickListener {
@@ -45,8 +61,6 @@ class HomePage : AppCompatActivity() {
         val profilePicture = findViewById<ImageView>(R.id.profileP)
         profilePicture.setOnClickListener {
             startActivity(Intent(this, ProfilePage::class.java))
-            val intent = Intent(this,ProfilePage::class.java)
-            startActivity(intent)
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
@@ -70,10 +84,6 @@ class HomePage : AppCompatActivity() {
             handleSearchQuery(editTextSearch.text.toString())
         }
 
-        val profileImageUri = loadProfileImage()
-        if (profileImageUri != null) {
-            profilePicture.setImageURI(profileImageUri)
-        }
     }
 
     private fun handleSearchQuery(query: String) {

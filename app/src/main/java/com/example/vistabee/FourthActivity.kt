@@ -15,43 +15,39 @@ class FourthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fourth1)
 
-        val reg_text = findViewById<TextView>(R.id.register_text)
+        val logInBtn = findViewById<Button>(R.id.login_btn)
+        val userEmailInput : TextInputEditText = findViewById(R.id.email_auth)
+        val userPasswordInput : EditText = findViewById(R.id.password_auth)
 
-        reg_text.setOnClickListener {
-            val intent = Intent(this, FifthActivity::class.java)
-            startActivity(intent)
+        val regTxt : TextView = findViewById(R.id.register_text)
+
+        regTxt.setOnClickListener {
+            startActivity(Intent(this, FifthActivity::class.java))
         }
 
-
-
-        val logInBtn = findViewById<Button>(R.id.login_btn)
-        val userEmail : TextInputEditText = findViewById(R.id.email_auth)
-        val userPassword : EditText = findViewById(R.id.password_auth)
-
         logInBtn.setOnClickListener {
-            val intent = Intent(this, HomePage::class.java)
-            val email = userEmail.text.toString().trim()
-            val password = userPassword.text.toString().trim()
+            val email = userEmailInput.text.toString().trim()
+            val password = userPasswordInput.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "One or more fields are empty, please check again", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Email or password is empty", Toast.LENGTH_LONG).show()
             } else {
-                val db = DbHelper(this, null)
-                val isAuth = db.getUser(email, password)
+                val dbHelper = DbHelper(this, null)
+                val isAuth = dbHelper.getUser(email, password)
 
+                // После успешной аутентификации пользователя, сохраните его электронную почту в Intent
                 if (isAuth) {
                     Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
-                    userEmail.text?.clear()
-                    userPassword.text.clear()
-//                    startActivity(Intent(this, SuccessActivity::class.java))
+                    val intent = Intent(this, HomePage::class.java)
+                    intent.putExtra("bazar@gmail.com", email)// Сохраняем электронную почту в Intent
+                    userEmailInput.text?.clear()
+                    userPasswordInput.text.clear()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "User $email not found", Toast.LENGTH_LONG).show()
-//                    startActivity(Intent(this, FailActivity::class.java))
                 }
+
             }
         }
-
-
     }
 }
