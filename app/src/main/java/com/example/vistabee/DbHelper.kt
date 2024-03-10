@@ -14,7 +14,12 @@ class DbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
+<<<<<<< HEAD
 
+=======
+//        db!!.execSQL("DROP TABLE IF EXISTS users")
+//        onCreate(db)
+>>>>>>> 79636d2579b9f48074d12c60fb9a70102227b99e
     }
 
 

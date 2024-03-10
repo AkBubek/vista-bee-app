@@ -3,21 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f2f2f2"
     android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/burg" />
 
     <ImageView
         android:id="@+id/settingBackBtn"
         android:layout_width="30dp"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
         app:srcCompat="@drawable/backarrow"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="26dp"
         android:layout_marginLeft="20dp"/>
 
 
@@ -69,91 +63,91 @@
 
     <ImageView
         android:id="@+id/imageView36"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/goarrow"
-        android:layout_marginTop="118dp"
+        android:layout_marginTop="120dp"
         android:layout_marginLeft="330dp"/>
 
     <ImageView
         android:id="@+id/imageView37"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/goarrow"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="67dp"
         android:layout_marginLeft="330dp"
         android:layout_below="@id/imageView36"/>
 
     <ImageView
         android:id="@+id/imageView38"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/goarrow"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="67dp"
         android:layout_marginLeft="330dp"
         android:layout_below="@id/imageView37"/>
 
     <ImageView
         android:id="@+id/imageView39"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/goarrow"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="67dp"
         android:layout_marginLeft="330dp"
         android:layout_below="@id/imageView38"/>
 
     <ImageView
         android:id="@+id/imageView40"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/goarrow"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="67dp"
         android:layout_marginLeft="330dp"
         android:layout_below="@id/imageView39"/>
 
     <ImageView
         android:id="@+id/imageView41"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
         app:srcCompat="@drawable/sone"
-        android:layout_marginTop="118dp"
+        android:layout_marginTop="123dp"
         android:layout_marginLeft="50dp"/>
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         app:srcCompat="@drawable/stwo"
         android:layout_below="@id/imageView41"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="64dp"/>
 
     <ImageView
         android:id="@+id/imageView43"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
         app:srcCompat="@drawable/sthree"
         android:layout_below="@id/imageView42"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="64dp"/>
 
     <ImageView
         android:id="@+id/imageView44"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
         app:srcCompat="@drawable/sfour"
         android:layout_below="@id/imageView43"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="64dp"/>
 
     <ImageView
         android:id="@+id/imageView45"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
         app:srcCompat="@drawable/sfive"
         android:layout_below="@id/imageView44"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="64dp"/>
 
     <TextView
         android:id="@+id/textView19"
@@ -165,7 +159,7 @@
         android:paddingLeft="20dp"
         android:text="Settings"
         android:textColor="#323232"
-        android:textSize="28sp"
+        android:textSize="24sp"
         tools:ignore="HardcodedText,NotSibling" />
 
     <TextView
@@ -175,7 +169,7 @@
         android:fontFamily="@font/dm_sans_medium"
         android:text="Notification"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:layout_toRightOf="@id/imageView41"
         android:paddingTop="120dp"
         android:paddingLeft="16dp"/>
@@ -187,9 +181,10 @@
         android:fontFamily="@font/dm_sans_medium"
         android:text="Linked Accounts"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="22sp"
+        android:layout_below="@id/textView20"
         android:layout_toRightOf="@id/imageView42"
-        android:paddingTop="210dp"
+        android:layout_marginTop="60dp"
         android:paddingLeft="16dp"/>
 
     <TextView
@@ -199,9 +194,10 @@
         android:fontFamily="@font/dm_sans_medium"
         android:text="Language"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:layout_toRightOf="@id/imageView42"
-        android:paddingTop="300dp"
+        android:layout_below="@id/textView21"
+        android:layout_marginTop="60dp"
         android:paddingLeft="16dp"/>
 
     <TextView
@@ -211,23 +207,24 @@
         android:fontFamily="@font/dm_sans_medium"
         android:text="Security"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="22sp"
+        android:layout_below="@id/textView22"
         android:layout_toRightOf="@id/imageView42"
-        android:paddingTop="388dp"
+        android:layout_marginTop="60dp"
         android:paddingLeft="16dp"/>
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-14dp"
         android:layout_toRightOf="@id/imageView42"
         android:fontFamily="@font/dm_sans_medium"
         android:paddingLeft="16dp"
-        android:paddingTop="480dp"
+        android:layout_below="@id/textView23"
         android:text="Privacy and Policy"
+        android:layout_marginTop="60dp"
         android:textColor="#000000"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/textView25"
