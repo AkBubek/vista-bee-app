@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profilez">
+
+    <ImageView
+        android:id="@+id/imageView70"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle2"
+        android:scaleType="centerCrop"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
+        android:text="Zhanserik Bazarov"
+        android:textSize="29sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:text="+7756669564"
+        android:textColor="#2E99C5"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:text="Phone:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bzhanseric@gmail.com"
+        android:textColor="#2E99C5"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="Email:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="390dp"
+        android:layout_height="83dp"
+        android:text="I am Bazarov Zhanseryk, I have quite a decent amount of work experience, I have worked both individually with clients and in corporations. During my student years, I participated in student programs and one of them is WorldSkills."
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="292dp"
+        android:layout_height="22dp"
+        android:text="-Higher college Apec Petrotechnic , SDU"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Programmer"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-GPA 3.9"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="108dp"
+        android:layout_height="32dp"
+        android:text="str. Nursaya 23"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adress:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Education"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summary"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/pencil"
+        tools:layout_editor_absoluteX="364dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

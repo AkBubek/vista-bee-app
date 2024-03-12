@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VistaBee"
         tools:targetApi="31">
+        <activity
+            android:name=".profilez"
+            android:exported="false" />
         <activity android:name=".ProfilePage" />
         <activity
             android:name=".Remote1"
@@ -49,9 +52,9 @@
         <activity android:name=".SkillsPage" />
         <activity android:name=".SummaryPage" />
         <activity android:name=".SettingPage" />
-        <activity android:name="MessageActivity"/>
-        <activity android:name="GetActivity"/>
-        <activity android:name="NotificationActivity"/>
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".GetActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".SuccessActivity" />
         <activity android:name=".FailActivity" />
 
