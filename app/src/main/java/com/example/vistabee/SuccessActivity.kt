@@ -14,7 +14,9 @@ class SuccessActivity  : AppCompatActivity() {
         val homeBtn = findViewById<Button>(R.id.button8)
 
         homeBtn.setOnClickListener {
+            val userName = intent.getStringExtra("userName") // Получаем имя пользователя из Intent
             val intent = Intent(this, HomePage::class.java)
+            intent.putExtra("userName", userName) // Передаем имя пользователя в Intent
             startActivity(intent)
         }
         val cancelBtn = findViewById<Button>(R.id.button9)

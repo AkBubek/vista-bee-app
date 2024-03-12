@@ -34,20 +34,20 @@ class FourthActivity : AppCompatActivity() {
             } else {
                 val dbHelper = DbHelper(this, null)
                 val isAuth = dbHelper.getUser(email, password)
-
-                // После успешной аутентификации пользователя, сохраните его электронную почту в Intent
+                // После успешной аутентификации пользователя, получите его имя из базы данных
                 if (isAuth) {
-                    Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, HomePage::class.java)
-                    intent.putExtra("bazar@gmail.com", email)// Сохраняем электронную почту в Intent
-                    userEmailInput.text?.clear()
-                    userPasswordInput.text.clear()
+                    val userName = dbHelper.getUserName(email)
+                    // Создаем Intent и передаем имя пользователя на HomePage
+                    val intent = Intent(this, SuccessActivity::class.java)
+                    intent.putExtra("userName", userName) // Передача имени пользователя
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "User $email not found", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this, FailActivity::class.java))
                 }
 
             }
         }
     }
 }
+

@@ -68,15 +68,7 @@ android:background="#Ffffff">
             android:textColorHint="#ffffff"/>
 
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="135dp"
-            app:srcCompat="@drawable/poisk" />
+
 
         <ImageView
             android:id="@+id/imageButton3"
@@ -236,31 +228,7 @@ android:background="#Ffffff">
             android:layout_marginLeft="349dp"
             app:srcCompat="@drawable/google" />
 
-        <ImageView
-            android:id="@+id/fulltimebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="644dp"
-            android:layout_marginLeft="105dp"
-            app:srcCompat="@drawable/fulltime" />
 
-        <ImageView
-            android:id="@+id/remotebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="645dp"
-            android:layout_marginLeft="184dp"
-            app:srcCompat="@drawable/remote" />
-
-
-        <!--        <EditText-->
-        <!--            android:id="@+id/editTextText"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:background="@drawable/experience"-->
-        <!--            android:ems="10"-->
-        <!--            android:hint="University"-->
-        <!--            android:inputType="text" />-->
 
     </RelativeLayout>
 

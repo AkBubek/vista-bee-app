@@ -237,7 +237,7 @@
         android:layout_marginLeft="60dp"/>
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/logOutTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"

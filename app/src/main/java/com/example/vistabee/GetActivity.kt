@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vistabee.HomePage
-import com.example.vistabee.ProfilePage
 import com.example.vistabee.R
 
 class GetActivity : AppCompatActivity() {

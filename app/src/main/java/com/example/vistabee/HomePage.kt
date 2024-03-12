@@ -18,7 +18,7 @@ class HomePage : AppCompatActivity() {
     private lateinit var spot: ImageView
     private lateinit var appl: ImageView
     private lateinit var pin: ImageView
-    private lateinit var editTextSearch: EditText // Добавляем поле EditText
+    private lateinit var editTextSearch: EditText
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,17 +27,10 @@ class HomePage : AppCompatActivity() {
 
         val userNameTextView = findViewById<TextView>(R.id.userName)
 
-// Получаем электронную почту из Intent
-        val userEmail = intent.getStringExtra("bazar@gmail.com")
+        // Получаем имя пользователя из Intent
+        val userName = intent.getStringExtra("userName") ?: ""
+        userNameTextView.text = userName // Установка имени пользователя в TextView
 
-// Создаем экземпляр DbHelper для работы с базой данных
-        val dbHelper = DbHelper(this, null)
-
-// Получаем имя пользователя из базы данных, используя электронную почту
-        val userName = dbHelper.getUserName(userEmail)
-
-// Устанавливаем имя пользователя в TextView
-        userNameTextView.text = userName
 
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
@@ -46,13 +39,13 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val fullbtn = findViewById<ImageView>(R.id.fulltimebtn)
+        val fullbtn = findViewById<ImageView>(R.id.imageViewClick)
         fullbtn.setOnClickListener {
             val intent = Intent(this, Fulltime::class.java)
             startActivity(intent)
         }
 
-        val rembtn = findViewById<ImageView>(R.id.remotebtn)
+        val rembtn = findViewById<ImageView>(R.id.imageViewClick1)
         rembtn.setOnClickListener {
             val intent = Intent(this, Remote1::class.java)
             startActivity(intent)
@@ -69,71 +62,11 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Получаем ссылки на ImageView
-        imageViewClick = findViewById(R.id.imageViewClick)
-        spot = findViewById(R.id.spot)
-        appl = findViewById(R.id.appl)
-        pin = findViewById(R.id.pin)
 
-        // Получаем ссылку на EditText
-        editTextSearch = findViewById(R.id.editTextText)
 
-        // Устанавливаем слушатель для EditText, чтобы активировать поиск при нажатии на поле ввода
-        editTextSearch.setOnClickListener {
-            // Вызываем функцию обработки поискового запроса с текстом из EditText
-            handleSearchQuery(editTextSearch.text.toString())
+
         }
 
     }
 
-    private fun handleSearchQuery(query: String) {
-        // Определяем, какие изображения отображать или скрывать в зависимости от запроса
 
-        // Если запрос содержит "UX/UI Designer", показываем imageViewClick и скрываем остальные
-        if (query.contains("UX/UI Designer", ignoreCase = true)) {
-            imageViewClick.visibility = ImageView.VISIBLE
-            spot.visibility = ImageView.GONE
-            appl.visibility = ImageView.GONE
-            pin.visibility = ImageView.GONE
-        }
-        // Если запрос содержит "quality assurance", показываем spot и скрываем остальные
-        else if (query.contains("Quality Assurance", ignoreCase = true)) {
-            imageViewClick.visibility = ImageView.GONE
-            spot.visibility = ImageView.VISIBLE
-            appl.visibility = ImageView.GONE
-            pin.visibility = ImageView.GONE
-        }
-        // Если запрос содержит "business analyst", показываем appl и скрываем остальные
-        else if (query.contains("Business Analyst", ignoreCase = true)) {
-            imageViewClick.visibility = ImageView.GONE
-            spot.visibility = ImageView.GONE
-            appl.visibility = ImageView.VISIBLE
-            pin.visibility = ImageView.GONE
-        }
-        // Если запрос содержит "sales & marketing", показываем appl (или другое изображение) и скрываем остальные
-        else if (query.contains("Sales & Marketing", ignoreCase = true)) {
-            imageViewClick.visibility = ImageView.GONE
-            spot.visibility = ImageView.GONE
-            appl.visibility = ImageView.VISIBLE
-            pin.visibility = ImageView.GONE
-        }
-        // Если запрос содержит "writing & content", показываем pin (или другое изображение) и скрываем остальные
-        else if (query.contains("Writing & Content", ignoreCase = true)) {
-            imageViewClick.visibility = ImageView.GONE
-            spot.visibility = ImageView.GONE
-            appl.visibility = ImageView.GONE
-            pin.visibility = ImageView.VISIBLE
-        }
-        // Если запрос не соответствует ни одному ключевому слову, скрываем все изображения
-        else {
-            imageViewClick.visibility = ImageView.GONE
-            spot.visibility = ImageView.GONE
-            appl.visibility = ImageView.GONE
-            pin.visibility = ImageView.GONE
-        }
-    }
-
-    private fun loadProfileImage(): Uri? {
-        return null
-    }
-}

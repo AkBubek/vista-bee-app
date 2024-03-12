@@ -58,6 +58,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="278dp"
             android:background="@drawable/main"
+            android:hint="First Name"
             android:ems="10"
             android:inputType="text"
             android:paddingLeft="20dp"
@@ -72,6 +73,7 @@
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
+            android:hint="Last Name"
             android:inputType="text"
             android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -84,6 +86,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
+            android:hint="Phone Number"
             android:ems="10"
             android:inputType="number"
             android:paddingLeft="20dp"
@@ -98,6 +101,7 @@
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:paddingLeft="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -163,38 +167,6 @@
             android:layout_marginBottom="90dp"/>
 
 
-        <TextView
-            android:id="@+id/textView50"
-            android:layout_below="@id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="2dp"
-            android:text="First Name" />
-        <TextView
-            android:id="@+id/textView51"
-            android:layout_below="@id/editTextText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="2dp"
-            android:text="Last Name" />
-        <TextView
-            android:id="@+id/textView52"
-            android:layout_below="@id/editTextText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="2dp"
-            android:text="Phone Number" />
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_below="@id/editTextText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="2dp"
-            android:text="Email" />
 
         <ImageView
             android:id="@+id/backButTonn"

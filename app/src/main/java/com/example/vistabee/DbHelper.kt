@@ -14,12 +14,9 @@ class DbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-<<<<<<< HEAD
 
-=======
-//        db!!.execSQL("DROP TABLE IF EXISTS users")
-//        onCreate(db)
->>>>>>> 79636d2579b9f48074d12c60fb9a70102227b99e
+        db!!.execSQL("DROP TABLE IF EXISTS users")
+        onCreate(db)
     }
 
 
@@ -47,12 +44,13 @@ class DbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     fun getUserName(email: String?): String? {
         if (email.isNullOrEmpty()) {
-            return null // Возвращаем null, если email пуст или null
+            return null
         }
 
         val db = this.readableDatabase
         var userName: String? = null
         val cursor = db.rawQuery("SELECT login FROM users WHERE email = ?", arrayOf(email))
+0
         cursor.use {
             if (it.moveToFirst()) {
                 userName = it.getString(it.getColumnIndex("login"))
