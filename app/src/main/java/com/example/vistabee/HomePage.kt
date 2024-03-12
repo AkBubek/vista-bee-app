@@ -11,27 +11,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class HomePage : AppCompatActivity() {
 
-    private lateinit var imageViewClick: ImageView
-    private lateinit var spot: ImageView
-    private lateinit var appl: ImageView
-    private lateinit var pin: ImageView
-    private lateinit var editTextSearch: EditText
+    private lateinit var firebaseAuth: FirebaseAuth
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
-
-        val userNameTextView = findViewById<TextView>(R.id.userName)
-
-        // Получаем имя пользователя из Intent
-        val userName = intent.getStringExtra("userName") ?: ""
-        userNameTextView.text = userName // Установка имени пользователя в TextView
-
-
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
         readBtn.setOnClickListener {
@@ -61,12 +49,7 @@ class HomePage : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
         }
-
-
-
-
-        }
-
     }
+}
 
 
