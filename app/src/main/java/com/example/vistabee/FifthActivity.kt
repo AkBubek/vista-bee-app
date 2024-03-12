@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.auth
+import com.google.firebase.database.FirebaseDatabase
 
 
 class FifthActivity : AppCompatActivity() {
@@ -56,21 +58,36 @@ class FifthActivity : AppCompatActivity() {
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(
-                                baseContext,
-                                "Account Created.",
-                                Toast.LENGTH_SHORT,
-                            ).show()
-                            startActivity(Intent(this, FourthActivity::class.java))
+                            // Успешная регистрация пользователя
+                            Toast.makeText(baseContext, "Account Created.", Toast.LENGTH_SHORT).show()
+
+                            // Получение текущего пользователя
+                            val user = firebaseAuth.currentUser
+
+                            // Создание объекта с новым именем пользователя
+                            val profileUpdates = UserProfileChangeRequest.Builder()
+                                .setDisplayName(username) // Здесь устанавливается имя пользователя
+                                .build()
+
+                            // Обновление профиля пользователя
+                            user?.updateProfile(profileUpdates)
+                                ?.addOnCompleteListener { updateTask ->
+                                    if (updateTask.isSuccessful) {
+                                        Log.d(TAG, "User profile updated.")
+                                    } else {
+                                        Log.e(TAG, "Failed to update user profile.")
+                                    }
+                                }
+
+                            // Переход на домашнюю страницу
+                            startActivity(Intent(this, HomePage::class.java))
                         } else {
-                            Log.e(TAG, "createUserWithEmailAndPassword:failure", task.exception)
-                            Toast.makeText(
-                                baseContext,
-                                "Authentication failed.",
-                                Toast.LENGTH_SHORT,
-                            ).show()
+                            // Если регистрация не удалась
+                            Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                         }
                     }
+
+
             }
 
 

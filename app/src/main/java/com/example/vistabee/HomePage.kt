@@ -12,14 +12,23 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HomePage : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
-
+    private lateinit var currentUser: FirebaseUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        currentUser = firebaseAuth.currentUser ?: return
+        
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
         readBtn.setOnClickListener {
@@ -48,6 +57,12 @@ class HomePage : AppCompatActivity() {
         imageViewGoogle.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
+        }
+
+        val userName = currentUser.displayName
+        if (!userName.isNullOrEmpty()) {
+             val userNameTextView = findViewById<TextView>(R.id.userName)
+             userNameTextView.text = userName
         }
     }
 }
