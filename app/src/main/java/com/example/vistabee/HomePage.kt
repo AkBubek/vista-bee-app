@@ -13,11 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-
 class HomePage : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
@@ -28,7 +23,7 @@ class HomePage : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         currentUser = firebaseAuth.currentUser ?: return
-        
+
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
         readBtn.setOnClickListener {
