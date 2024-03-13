@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F3F3"
-    android:backgroundTint="#F3F3F3"
     tools:context=".Fulltime">
 
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="417dp"
-        android:layout_height="747dp"
-        app:srcCompat="@drawable/frame10"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="4dp"
+
+    <TextView
+        android:id="@+id/textView64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="UI/UX Designer"
+        android:textSize="20sp"
+        android:textStyle="bold"
         tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="50dp"
+        android:text="Google LLC"
+        android:textSize="19sp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/google" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="California, United Sates"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="95dp"
+        android:text="$10,000 - $25,000 / month"
+        android:textColor="#3A7BFE"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="135dp"
+        android:text="Required work experience: 1-2 years;"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full employment,full time ."
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gerbera-is a professional and passionate team that   every day creates the most convenient IT platform for the   organization. Half of the employees work remotely from  different countries of the world, but it is for this position that   employees must come."
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our clients-are people who want to automate actions in their  field in order to make their task easier, as well as the task for   their employees and clients."
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="270dp"/>
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="330dp"
+        android:text="What is needed:"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Secondary or higher education;"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1 or 2 years of experience;"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="10dp"/>
+
+
+</RelativeLayout>
+
