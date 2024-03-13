@@ -87,8 +87,6 @@ class HomePage : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    // Переход на страницу Home
-
                     Toast.makeText(this, "Home already selected", Toast.LENGTH_SHORT).show()
                     true
                 }

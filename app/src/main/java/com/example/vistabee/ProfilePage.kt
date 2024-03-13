@@ -11,14 +11,21 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.storage.FirebaseStorage
 
 class ProfilePage : AppCompatActivity() {
 
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var currentUser: FirebaseUser
     private lateinit var imageView: ImageView
 
+    private var storageReference = FirebaseStorage.getInstance().reference
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -32,6 +39,9 @@ class ProfilePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ninth)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        currentUser = firebaseAuth.currentUser ?: return
 
         val eduBtn = findViewById<Button>(R.id.educationBtn)
         val expBtn = findViewById<Button>(R.id.experienceBtn)
@@ -83,12 +93,29 @@ class ProfilePage : AppCompatActivity() {
 
     private fun setRoundedImage(imageUri: Uri?) {
         imageUri?.let {
-            saveProfileImageUri(it)
-            val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
-            val roundedBitmapDrawable =
-                RoundedBitmapDrawableFactory.create(resources, bitmap)
-            roundedBitmapDrawable.isCircular = true
-            imageView.setImageDrawable(roundedBitmapDrawable)
+            val imageName = "${currentUser.uid}.jpg"
+            val imageRef = storageReference.child("profile_images").child(imageName)
+
+            val uploadTask = imageRef.putFile(imageUri)
+            uploadTask.addOnSuccessListener { taskSnapshot ->
+                // Получение ссылки на загруженное изображение
+                imageRef.downloadUrl.addOnSuccessListener { uri ->
+                    // Сохранение ссылки в базе данных Firebase
+                    saveProfileImageUri(uri)
+
+                    // Отображение изображения
+                    val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
+                    val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmap)
+                    roundedBitmapDrawable.isCircular = true
+                    imageView.setImageDrawable(roundedBitmapDrawable)
+                }.addOnFailureListener { exception ->
+                    // Обработка ошибки при получении ссылки на изображение
+                    Toast.makeText(this, "Image uri fetch failed", Toast.LENGTH_SHORT).show()
+                }
+            }.addOnFailureListener { exception ->
+                // Обработка ошибки при загрузке изображения
+                Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -108,17 +135,6 @@ class ProfilePage : AppCompatActivity() {
         return savedUriString?.let { Uri.parse(it) }
     }
 
-    private val REQUEST_CODE_PICK_PDF = 1
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_CODE_PICK_PDF && resultCode == Activity.RESULT_OK) {
-            data?.data?.let { uri ->
-                // Выбранный файл PDF доступен по uri
-                // Вы можете выполнить нужные действия с этим файлом здесь
-                // Например, загрузка на сервер, обработка содержимого файла и т.д.
-                // Просто добавьте нужный код для работы с выбранным файлом
-            }
-        }
-    }
+
 }
