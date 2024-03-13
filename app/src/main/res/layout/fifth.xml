@@ -43,7 +43,7 @@
         android:text="SIGN UP"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="240dp"/>
+        android:layout_marginBottom="200dp"/>
 
 
     <EditText
@@ -54,18 +54,47 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="User Name"
+        android:hint="First Name"
         android:inputType="text"
         android:textColor="#707070"
         android:textColorHint="#8E8E8E"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text"
+        android:textColor="#707070"
+        android:textColorHint="#8E8E8E"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColor="#707070"
+        android:textColorHint="#8E8E8E"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/userName"
+        android:layout_below="@id/phoneNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:hint="Email Address"
@@ -84,7 +113,7 @@
         android:inputType="textPassword"
         android:textColor="#707070"
         android:textColorHint="#8E8E8E"
-        android:hint="Password"
+        android:hint="@string/password"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -95,7 +124,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="77dp"
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Have account?"
+        android:text="Already have account?"
         android:textColor="#959595"
         android:textSize="20sp" />
 
@@ -109,7 +138,6 @@
         android:fontFamily="@font/dm_sans_medium"
         android:text="Log in"
         android:textSize="20sp" />
->>>>>>> refs/remotes/origin/main
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -119,10 +147,9 @@
         android:id="@+id/imageView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         app:srcCompat="@drawable/message"
-        android:layout_toLeftOf="@id/email"
-        android:layout_below="@id/imageView86"
+        android:layout_toStartOf="@id/email"
+        android:layout_above="@id/imageView82"
         android:layout_marginTop="44dp"/>
 
     <ImageView
@@ -130,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/profile"
-        android:layout_toLeftOf="@id/userName"
+        android:layout_toStartOf="@id/userName"
         android:layout_marginTop="140dp"/>
 
     <ImageView
@@ -138,7 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/vector"
-        android:layout_toLeftOf="@id/password"
+        android:layout_toStartOf="@id/password"
         android:layout_below="@id/email"
         android:layout_marginTop="32dp"/>
 

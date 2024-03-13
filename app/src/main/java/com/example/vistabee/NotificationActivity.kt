@@ -8,7 +8,7 @@ class NotificationActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.eight)
+        setContentView(R.layout.seventh)
 
     }
 }
