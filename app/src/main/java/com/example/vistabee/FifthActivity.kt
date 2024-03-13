@@ -21,16 +21,12 @@ import com.google.firebase.database.FirebaseDatabase
 class FifthActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
-
     private lateinit var regUserName : EditText
-
+    private lateinit var regLastname : EditText
+    private lateinit var regPhoneNumber: EditText
     private  lateinit var regEmail : TextInputEditText
-
     private  lateinit var regPassword : EditText
-
     private lateinit var signUpBtn : Button
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +35,8 @@ class FifthActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         regUserName = findViewById(R.id.userName)
+        regLastname = findViewById(R.id.lastName)
+        regPhoneNumber = findViewById(R.id.phoneNumber)
         regEmail = findViewById(R.id.email)
         regPassword = findViewById(R.id.password)
 
@@ -48,55 +46,46 @@ class FifthActivity : AppCompatActivity() {
 
         signUpBtn.setOnClickListener {
 
+            val firebaseAuth = FirebaseAuth.getInstance()
+            val databaseRef = FirebaseDatabase.getInstance().getReference("users")
             val username = regUserName.text.toString()
             val email = regEmail.text.toString()
             val password = regPassword.text.toString()
+            val lastname = regLastname.text.toString()
+            val phoneNumber = regPhoneNumber.text.toString()
 
-            if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)||TextUtils.isEmpty(username)){
+            if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)||TextUtils.isEmpty(username)||TextUtils.isEmpty(lastname)||TextUtils.isEmpty(phoneNumber)){
                 Toast.makeText(this, "One or more fields are empty", Toast.LENGTH_SHORT).show();
             } else {
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            // Успешная регистрация пользователя
-                            Toast.makeText(baseContext, "Account Created.", Toast.LENGTH_SHORT).show()
-
-                            // Получение текущего пользователя
                             val user = firebaseAuth.currentUser
+                            Toast.makeText(this, "Successful Auth", Toast.LENGTH_SHORT).show()
+                            val newUser = User(
+                                userName = username,
+                                lastName = lastname,
+                                email = email,
+                                phoneNumber = phoneNumber,
 
-                            // Создание объекта с новым именем пользователя
-                            val profileUpdates = UserProfileChangeRequest.Builder()
-                                .setDisplayName(username) // Здесь устанавливается имя пользователя
-                                .build()
-
-                            // Обновление профиля пользователя
-                            user?.updateProfile(profileUpdates)
-                                ?.addOnCompleteListener { updateTask ->
-                                    if (updateTask.isSuccessful) {
-                                        Log.d(TAG, "User profile updated.")
-                                    } else {
-                                        Log.e(TAG, "Failed to update user profile.")
+                            )
+                            user?.uid?.let { userId ->
+                                databaseRef.child(userId).setValue(newUser)
+                                    .addOnSuccessListener {
+                                        Toast.makeText(this, "Data saved Successfully", Toast.LENGTH_SHORT).show()
                                     }
-                                }
-
-                            // Переход на домашнюю страницу
+                                    .addOnFailureListener { e ->
+                                        Toast.makeText(this, "Could not save data", Toast.LENGTH_SHORT).show()
+                                    }
+                            }
                             startActivity(Intent(this, HomePage::class.java))
                         } else {
-                            // Если регистрация не удалась
-                            Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"Registration Failed",Toast.LENGTH_SHORT).show()
                         }
                     }
-
-
             }
-
-
-
         }
-
-
         val logTxt = findViewById<TextView>(R.id.login_text)
-
         logTxt.setOnClickListener{
             val intent = Intent(this, FourthActivity::class.java)
             startActivity(intent)

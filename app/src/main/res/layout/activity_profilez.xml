@@ -102,23 +102,6 @@
         tools:layout_editor_absoluteY="415dp" />
 
     <TextView
-        android:id="@+id/textView59"
-        android:layout_width="108dp"
-        android:layout_height="32dp"
-        android:text="str. Nursaya 23"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="292dp" />
-
-    <TextView
-        android:id="@+id/textView61"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adress:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="285dp" />
-
-    <TextView
         android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

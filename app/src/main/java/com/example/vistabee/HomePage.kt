@@ -14,6 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+
 class HomePage : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
@@ -24,6 +29,25 @@ class HomePage : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         currentUser = firebaseAuth.currentUser ?: return
+
+        val databaseRef = FirebaseDatabase.getInstance().getReference("users")
+
+        databaseRef.child(currentUser.uid).addListenerForSingleValueEvent(object :
+            ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val user = snapshot.getValue(User::class.java)
+                val userName = user?.userName
+                if (!userName.isNullOrEmpty()) {
+
+                    val userNameTextView = findViewById<TextView>(R.id.userName)
+                    userNameTextView.text = userName
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
+
 
 
         val readBtn = findViewById<Button>(R.id.readmorebtn)
@@ -55,13 +79,8 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-<<<<<<< HEAD
-        val userName = currentUser.displayName
-        if (!userName.isNullOrEmpty()) {
-             val userNameTextView = findViewById<TextView>(R.id.userName)
-             userNameTextView.text = userName
-        }
-=======
+
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
         bottomNavigationView.selectedItemId = R.id.navigation_home
 
@@ -105,7 +124,6 @@ class HomePage : AppCompatActivity() {
             }
         }
 
->>>>>>> a48c2fb23f996ff0a99f779167a78140f4996391
     }
 }
 

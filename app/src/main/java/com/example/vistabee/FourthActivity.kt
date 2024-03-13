@@ -30,7 +30,7 @@ class FourthActivity : AppCompatActivity() {
 
         emailAuth = findViewById(R.id.email_auth)
         passAuth = findViewById(R.id.password_auth)
-        loginBtn = findViewById(R.id.login_btn) // Добавляем инициализацию loginBtn
+        loginBtn = findViewById(R.id.login_btn)
 
         loginBtn.setOnClickListener {
             val emailData = emailAuth.text.toString()
