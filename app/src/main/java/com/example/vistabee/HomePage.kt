@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -23,6 +24,8 @@ class HomePage : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var currentUser: FirebaseUser
+    private lateinit var profilePicture: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
@@ -68,7 +71,7 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val profilePicture = findViewById<ImageView>(R.id.profileP)
+        profilePicture = findViewById(R.id.profileP)
         profilePicture.setOnClickListener {
             startActivity(Intent(this, ProfilePage::class.java))
         }
@@ -122,7 +125,31 @@ class HomePage : AppCompatActivity() {
             }
         }
 
+
+        loadProfileImage()
     }
+
+    private fun loadProfileImage() {
+        currentUser.uid.let { userId ->
+            val userDataRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
+            userDataRef.child("userProfilePicUrl").addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val userProfilePicUrl = snapshot.value as? String
+                    userProfilePicUrl?.let { url ->
+                        Glide.with(this@HomePage)
+                            .load(url)
+                            .into(profilePicture)
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                    Toast.makeText(this@HomePage, "Failed to load profile image", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
+    }
+
 }
 
 

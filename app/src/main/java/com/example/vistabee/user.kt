@@ -9,4 +9,5 @@ data class User(
     val userGpa: String = "",
     val userEdu: String = "",
     val userSkills: String = "",
+    val userProfilePicUrl: String = ""
 )

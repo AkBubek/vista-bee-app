@@ -4,6 +4,7 @@ package com.example.vistabee
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import com.bumptech.glide.Glide
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
@@ -17,6 +18,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 
 class ProfilePage : AppCompatActivity() {
@@ -28,7 +33,7 @@ class ProfilePage : AppCompatActivity() {
     private var storageReference = FirebaseStorage.getInstance().reference
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
+            if (result.resultCode == RESULT_OK) {
                 val data: Intent? = result.data
                 val selectedImageUri = data?.data
                 setRoundedImage(selectedImageUri)
@@ -101,7 +106,10 @@ class ProfilePage : AppCompatActivity() {
                 // Получение ссылки на загруженное изображение
                 imageRef.downloadUrl.addOnSuccessListener { uri ->
                     // Сохранение ссылки в базе данных Firebase
-                    saveProfileImageUri(uri)
+                    currentUser.uid?.let { userId ->
+                        val userDataRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
+                        userDataRef.child("userProfilePicUrl").setValue(uri.toString())
+                    }
 
                     // Отображение изображения
                     val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
@@ -119,22 +127,29 @@ class ProfilePage : AppCompatActivity() {
         }
     }
 
-    private fun saveProfileImageUri(imageUri: Uri?) {
-        imageUri?.let {
-            val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-            with(sharedPref.edit()) {
-                putString("profile_image_uri", it.toString())
-                apply()
-            }
+    private fun loadProfileImage() {
+        currentUser.uid.let { userId ->
+            val userDataRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
+            userDataRef.child("userProfilePicUrl").addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val userProfilePicUrl = snapshot.value as? String
+                    userProfilePicUrl?.let { url ->
+                        Glide.with(this@ProfilePage)
+                            .load(url)
+                            .into(imageView)
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                    Toast.makeText(this@ProfilePage, "Failed to load profile image", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 
-    private fun loadProfileImage(): Uri? {
-        val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-        val savedUriString = sharedPref.getString("profile_image_uri", null)
-        return savedUriString?.let { Uri.parse(it) }
-    }
 
 
 
 }
+
