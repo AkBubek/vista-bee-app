@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -49,6 +50,50 @@ class HomePage : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://meet.google.com/?pli=1"))
             startActivity(intent)
         }
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
+        bottomNavigationView.selectedItemId = R.id.navigation_home
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    // Переход на страницу Home
+
+                    Toast.makeText(this, "Home already selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_dashboard -> {
+                    // Переход на страницу Dashboard (ProfilePage)
+                    val intent = Intent(this, ProfilePage::class.java)
+                    startActivity(intent)
+                    Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_plus -> {
+                    // Переход на другую страницу (если необходимо)
+                    Toast.makeText(this, "Add a job", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, GetActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_message -> {
+                    // Переход на другую страницу (если необходимо)
+                    val intent = Intent(this, MessageActivity::class.java)
+                    startActivity(intent)
+                    Toast.makeText(this, "Messages ", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_notifications -> {
+                    // Переход на другую страницу (если необходимо)
+                    val intent = Intent(this, NotificationActivity::class.java)
+                    startActivity(intent)
+                    Toast.makeText(this, "Notifications ", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 }
 
