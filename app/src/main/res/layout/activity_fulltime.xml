@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/textView69"
-        android:layout_width="239dp"
+        android:layout_width="273dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="135dp"
@@ -110,6 +110,72 @@
         android:text="-1 or 2 years of experience;"
         android:layout_marginTop="370dp"
         android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Resolution of controversial situations;"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="390dp"/>
+
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Work with the team;"
+        android:layout_marginTop="410dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Letter of recommendation;"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="427dp"/>
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Knowledge of Russian, English and Kazakh;"
+        android:layout_marginTop="445dp"
+        android:layout_marginLeft="11dp"/>
+
+    <TextView
+        android:id="@+id/textView79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Communication with clients;"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="462dp"/>
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Ability to adapt quickly."
+        android:layout_marginTop="479dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If this vacancy suits you and you have all the conditions to   come here, you must send an application with your resume.  And if you are suitable for us, we will write or call you within   2 weeks. "
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="510dp"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3A7BFE"
+        android:text="Activate"
+        android:layout_marginTop="610dp"
+        android:layout_marginLeft="150dp"/>
 
 
 </RelativeLayout>
