@@ -151,9 +151,54 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:backgroundTint="#C5D8FF"
+<<<<<<< HEAD
             android:text="@string/save"
             android:layout_marginBottom="40dp"/>
 
+=======
+            android:text="Experience" />
+        <Button
+            android:id="@+id/skillsBtn"
+            android:layout_below="@id/experienceBtn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="#C5D8FF"
+            android:text="Skills" />
+
+
+
+        <Button
+            android:id="@+id/summaryBtn"
+            android:layout_below="@id/skillsBtn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="#C5D8FF"
+            android:text="Summary"/>
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/summaryBtn"
+            android:text="Choose PDF File"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnDownloadFile"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:text="Download PDF File"
+            android:layout_below="@id/btnChooseFile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+
+>>>>>>> fa7d080c033937fb8766e777b880c3c374ffd1cf
 
         <ImageView
             android:id="@+id/backButTonn"
@@ -163,6 +208,19 @@
             android:layout_marginTop="60dp"
             android:rotationY="181"
             app:srcCompat="@drawable/arrow" />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#246BFD"
+            android:shadowColor="#41000000"
+            android:layout_below="@id/btnDownloadFile"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:textSize="20sp" />
+
 
 
     </RelativeLayout>

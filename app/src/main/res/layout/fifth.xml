@@ -183,16 +183,7 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/message"
-        android:layout_toStartOf="@id/email"
-        android:layout_above="@id/imageView82"
-        android:layout_marginTop="44dp"/>
-
-    <ImageView
-        android:id="@+id/imageView86"
+        android:id="@+id/first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/profile"
@@ -200,13 +191,39 @@
         android:layout_marginTop="140dp"/>
 
     <ImageView
-        android:id="@+id/imageView82"
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/profile"
+        android:layout_below="@id/first"
+        android:layout_toStartOf="@id/lastName"
+        android:layout_marginTop="42dp"/>
+
+    <ImageView
+        android:id="@+id/third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phone"
+        android:layout_toStartOf="@id/phoneNumber"
+        android:layout_below="@id/second"
+        android:layout_marginTop="42dp"/>
+
+    <ImageView
+        android:id="@+id/fourth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/message"
+        android:layout_toStartOf="@id/email"
+        android:layout_below="@id/third"
+        android:layout_marginTop="42dp"/>
+
+    <ImageView
+        android:id="@+id/fifth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/vector"
         android:layout_toStartOf="@id/password"
-        android:layout_below="@id/email"
-        android:layout_marginTop="32dp"/>
-
+        android:layout_below="@id/fourth"
+        android:layout_marginTop="42dp"/>
 
 </RelativeLayout>
