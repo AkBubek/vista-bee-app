@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fulltime">
+    tools:context=".Fulltime"
+    android:padding="30dp"
+    >
 
 
     <TextView
@@ -173,10 +175,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#3A7BFE"
-        android:text="Activate"
+        android:text="Apply for job"
         android:layout_marginTop="610dp"
         android:layout_marginLeft="150dp"/>
-
-
 </RelativeLayout>
 

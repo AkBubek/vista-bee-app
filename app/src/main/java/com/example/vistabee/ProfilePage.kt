@@ -31,6 +31,13 @@ class ProfilePage : AppCompatActivity() {
     private lateinit var currentUser: FirebaseUser
     private lateinit var imageView: ImageView
 
+    private lateinit var summaryEdit : EditText
+    private lateinit var firstNameEdit : EditText
+    private lateinit var lastNameEdit : EditText
+    private lateinit var phoneNumberEdit : EditText
+    private lateinit var specialityEdit : EditText
+    private lateinit var skillsEdit : EditText
+
     private var storageReference = FirebaseStorage.getInstance().reference
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -50,18 +57,12 @@ class ProfilePage : AppCompatActivity() {
         currentUser = firebaseAuth.currentUser ?: return
 
         val eduBtn = findViewById<Button>(R.id.educationBtn)
-        val sklBtn = findViewById<EditText>(R.id.skillsEdit)
         val saveBtn = findViewById<Button>(R.id.saveBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
         val backBtn = findViewById<ImageView>(R.id.backButTonn)
-        val profBtn = findViewById<ImageView>(R.id.profileP)
 
         eduBtn.setOnClickListener {
             val intent = Intent(this, EduPage::class.java)
-            startActivity(intent)
-        }
-        sklBtn.setOnClickListener {
-            val intent = Intent(this, SkillsPage::class.java)
             startActivity(intent)
         }
         setBtn.setOnClickListener {
@@ -80,9 +81,52 @@ class ProfilePage : AppCompatActivity() {
 
         loadProfileImage()
 
-        saveBtn.setOnClickListener {
+        summaryEdit = findViewById(R.id.summaryEdit)
+        firstNameEdit = findViewById(R.id.firstNameEdit)
+        lastNameEdit = findViewById(R.id.lastNameEdit)
+        phoneNumberEdit = findViewById(R.id.phoneNumberEdit)
+        specialityEdit = findViewById(R.id.specialityEdit)
+        skillsEdit = findViewById(R.id.skillsEdit)
 
+
+
+        val databaseRef = FirebaseDatabase.getInstance().getReference("users")
+        val currentUser = firebaseAuth.currentUser
+
+        saveBtn.setOnClickListener {
+            val summary = summaryEdit.text.toString()
+            val firstName = firstNameEdit.text.toString()
+            val lastName = lastNameEdit.text.toString()
+            val phoneNumber = phoneNumberEdit.text.toString()
+            val speciality = specialityEdit.text.toString()
+            val skills = skillsEdit.text.toString()
+
+            currentUser?.let { user ->
+                val userId = user.uid
+
+                if (summary.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSummarydddddddddddddddddd").setValue(summary)
+                }
+                if (firstName.isNotEmpty()) {
+                    databaseRef.child(userId).child("firstName").setValue(firstName)
+                }
+                if (lastName.isNotEmpty()) {
+                    databaseRef.child(userId).child("lastName").setValue(lastName)
+                }
+                if (phoneNumber.isNotEmpty()) {
+                    databaseRef.child(userId).child("phoneNumber").setValue(phoneNumber)
+                }
+                if (speciality.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSpeciality").setValue(speciality)
+                }
+                if (skills.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSkills").setValue(skills)
+                }
+            }
+
+            startActivity(Intent(this, ProfileStatic::class.java))
         }
+
 
     }
 

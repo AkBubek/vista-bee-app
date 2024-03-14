@@ -1,79 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="50dp"
     tools:context=".ProfileStatic"
-    tools:ignore="ContentDescription"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
 
     <TextView
+        android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/backBtn"
-        android:text="@string/go_back"/>
+        android:text="@string/go_back" />
 
     <ImageView
         android:id="@+id/editIcon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:srcCompat="@drawable/pencil"
-        android:layout_alignParentEnd="true"
-        />
+        android:src="@drawable/pencil"
+        android:layout_alignParentEnd="true" />
+
     <ImageView
         android:id="@+id/profilePictureStatic"
         android:layout_width="147dp"
         android:layout_height="147dp"
         android:background="@drawable/circle2"
         android:scaleType="centerCrop"
-        android:layout_centerHorizontal="true"
-         />
+        android:layout_centerHorizontal="true" />
+
     <RelativeLayout
+        android:id="@+id/userNameLayout"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
-<<<<<<< HEAD
         android:layout_below="@id/profilePictureStatic"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/userNameLayout"
-        >
+        android:layout_centerHorizontal="true">
+
         <TextView
             android:id="@+id/firstName"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
             android:text="First name"
-            android:textSize="29sp"
-            tools:ignore="MissingConstraints"
-            android:layout_marginEnd="10dp"
-            />
+            android:textSize="29sp" />
+
         <TextView
             android:id="@+id/lastName"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
             android:text="Last name"
             android:textSize="29sp"
-            tools:ignore="MissingConstraints"
             android:layout_toEndOf="@id/firstName"
-            android:layout_marginStart="10dp"
-            />
+            android:layout_marginStart="10dp" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/phoneNumberLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userNameLayout"
-        android:id="@+id/phoneNumberLayout"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
+
         <TextView
             android:id="@+id/phoneLabel"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:text="Phone:"
             android:textSize="24sp"
-            android:layout_centerVertical="true"
-            />
+            android:layout_centerVertical="true" />
+
         <TextView
             android:id="@+id/phoneNumber"
             android:layout_width="wrap_content"
@@ -81,94 +74,25 @@
             android:text=" +7756669564"
             android:textColor="#2E99C5"
             android:textSize="24sp"
-            tools:ignore="MissingConstraints"
             android:layout_toEndOf="@id/phoneLabel"
-            android:layout_centerVertical="true"
-            />
+            android:layout_centerVertical="true" />
     </RelativeLayout>
+
     <RelativeLayout
-=======
-        android:text="Zhanserik Bazarov"
-        android:textSize="29sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="163dp" />
-
-    <TextView
-        android:id="@+id/textView50"
-        android:layout_width="126dp"
-        android:layout_height="24dp"
-        android:text="+7756669564"
-        android:textColor="#2E99C5"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="224dp" />
-
-    <TextView
-        android:id="@+id/textView60"
-        android:layout_width="80dp"
-        android:layout_height="28dp"
-        android:text="Phone:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="220dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="bzhanseric@gmail.com"
-        android:textColor="#2E99C5"
-        android:textSize="16sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="262dp" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:text="Email:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="255dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="390dp"
-        android:layout_height="83dp"
-        android:text="I am Bazarov Zhanseryk, I have quite a decent amount of work experience, I have worked both individually with clients and in corporations. During my student years, I participated in student programs and one of them is WorldSkills."
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="488dp" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="292dp"
-        android:layout_height="22dp"
-        android:text="-Higher college Apec Petrotechnic , SDU"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="393dp" />
-
-    <TextView
-        android:id="@+id/textView49"
->>>>>>> fa7d080c033937fb8766e777b880c3c374ffd1cf
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/emailLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/phoneNumberLayout"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
+
         <TextView
             android:id="@+id/emailLabel"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:text="Email:"
             android:textSize="24sp" />
+
         <TextView
             android:id="@+id/email"
             android:layout_width="wrap_content"
@@ -176,80 +100,81 @@
             android:text="example@gmail.com"
             android:textColor="#2E99C5"
             android:textSize="24sp"
-            android:layout_toEndOf="@id/emailLabel"
-            />
+            android:layout_toEndOf="@id/emailLabel" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/educationLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/educationLayout"
-        android:layout_above="@+id/summaryLayout"
-        >
+        android:layout_above="@+id/summaryLayout">
+
         <TextView
             android:id="@+id/educationLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Education"
             android:textSize="20sp" />
+
         <TextView
             android:id="@+id/skills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:layout_below="@id/educationLabel"
-            android:layout_marginStart="10dp"
-            />
+            android:layout_marginStart="10dp" />
+
         <TextView
             android:id="@+id/collegeInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:layout_below="@id/skills"
-            android:layout_marginStart="10dp"
-             />
-            <RelativeLayout
+            android:layout_marginStart="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/gpaLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collegeInfo">
+
+            <TextView
+                android:id="@+id/gpaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@id/gpaLayout"
-                android:layout_below="@id/collegeInfo"
-                >
-                <TextView
-                    android:id="@+id/gpaLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="- GPA"
-                    android:layout_marginStart="10dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@id/gpa"
-                    android:layout_toEndOf="@id/gpaLabel"
-                    android:text=""
-                    android:layout_marginStart="5dp"
-                    />
-            </RelativeLayout>
+                android:text="- GPA"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:id="@+id/gpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_toEndOf="@id/gpaLabel"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/summaryLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/summaryLayout"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="150dp"
-        >
-            <TextView
-                android:id="@+id/summaryLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Summary"
-                android:textSize="20sp" />
+        android:layout_marginBottom="150dp">
 
-            <TextView
-                android:id="@+id/summaryText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/summaryLabel"
-                android:text="" />
+        <TextView
+            android:id="@+id/summaryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/summaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/summaryLabel"
+            android:text="" />
     </RelativeLayout>
+
 </RelativeLayout>

@@ -48,23 +48,34 @@
             android:background="@drawable/circle2"
             android:scaleType="centerCrop"/>
 
+        <EditText
+            android:id="@+id/summaryEdit"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:background="@drawable/main"
+            android:layout_below="@+id/imageView76"
+            android:layout_centerHorizontal="true"
+            android:hint="Summary"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:paddingStart="20dp"
 
+            />
 
         <EditText
             android:id="@+id/firstNameEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="278dp"
+            android:layout_below="@id/summaryEdit"
             android:background="@drawable/main"
             android:hint="@string/first_name_edit_profile"
-            android:ems="10"
             android:inputType="text"
             android:paddingStart="20dp"
-            tools:ignore="SpeakableTextPresentCheck"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
+
             />
 
         <EditText
@@ -142,36 +153,9 @@
             android:backgroundTint="#C5D8FF"
             android:text="@string/education" />
 
-
-        <Button
-            android:id="@+id/saveBtn"
-            android:layout_below="@id/skillsEdit"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:backgroundTint="#C5D8FF"
-<<<<<<< HEAD
-            android:text="@string/save"
-            android:layout_marginBottom="40dp"/>
-
-=======
-            android:text="Experience" />
-        <Button
-            android:id="@+id/skillsBtn"
-            android:layout_below="@id/experienceBtn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:backgroundTint="#C5D8FF"
-            android:text="Skills" />
-
-
-
         <Button
             android:id="@+id/summaryBtn"
-            android:layout_below="@id/skillsBtn"
+            android:layout_below="@id/educationBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
@@ -208,8 +192,9 @@
             android:layout_marginTop="60dp"
             android:rotationY="181"
             app:srcCompat="@drawable/arrow" />
+
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/saveBtn"
             android:layout_width="240dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
