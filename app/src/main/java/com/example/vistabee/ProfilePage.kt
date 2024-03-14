@@ -11,6 +11,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -49,9 +50,8 @@ class ProfilePage : AppCompatActivity() {
         currentUser = firebaseAuth.currentUser ?: return
 
         val eduBtn = findViewById<Button>(R.id.educationBtn)
-        val expBtn = findViewById<Button>(R.id.experienceBtn)
-        val sklBtn = findViewById<Button>(R.id.skillsBtn)
-        val sumBtn = findViewById<Button>(R.id.summaryBtn)
+        val sklBtn = findViewById<EditText>(R.id.skillsEdit)
+        val saveBtn = findViewById<Button>(R.id.saveBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
         val backBtn = findViewById<ImageView>(R.id.backButTonn)
         val profBtn = findViewById<ImageView>(R.id.profileP)
@@ -60,16 +60,8 @@ class ProfilePage : AppCompatActivity() {
             val intent = Intent(this, EduPage::class.java)
             startActivity(intent)
         }
-        expBtn.setOnClickListener {
-            val intent = Intent(this, ExpPage::class.java)
-            startActivity(intent)
-        }
         sklBtn.setOnClickListener {
             val intent = Intent(this, SkillsPage::class.java)
-            startActivity(intent)
-        }
-        sumBtn.setOnClickListener {
-            val intent = Intent(this, SummaryPage::class.java)
             startActivity(intent)
         }
         setBtn.setOnClickListener {
@@ -77,7 +69,7 @@ class ProfilePage : AppCompatActivity() {
             startActivity(intent)
         }
         backBtn.setOnClickListener {
-            val intent = Intent(this, HomePage::class.java)
+            val intent = Intent(this, ProfileStatic::class.java)
             startActivity(intent)
         }
 
@@ -87,6 +79,10 @@ class ProfilePage : AppCompatActivity() {
         }
 
         loadProfileImage()
+
+        saveBtn.setOnClickListener {
+
+        }
 
     }
 
@@ -136,17 +132,17 @@ class ProfilePage : AppCompatActivity() {
                     userProfilePicUrl?.let { url ->
                         Glide.with(this@ProfilePage)
                             .load(url)
+                            .circleCrop()
                             .into(imageView)
                     }
                 }
-
                 override fun onCancelled(error: DatabaseError) {
-
                     Toast.makeText(this@ProfilePage, "Failed to load profile image", Toast.LENGTH_SHORT).show()
                 }
             })
         }
     }
+
 
 
 

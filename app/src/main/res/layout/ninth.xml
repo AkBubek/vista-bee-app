@@ -34,7 +34,7 @@
             android:id="@+id/settingBtn"
             android:layout_width="47sp"
             android:layout_height="45dp"
-            android:layout_marginLeft="290dp"
+            android:layout_marginStart="290dp"
             android:layout_marginTop="60dp"
             app:srcCompat="@drawable/setnet" />
 
@@ -51,121 +51,108 @@
 
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/firstNameEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="278dp"
             android:background="@drawable/main"
-            android:hint="First Name"
+            android:hint="@string/first_name_edit_profile"
             android:ems="10"
             android:inputType="text"
-            android:paddingLeft="20dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:paddingStart="20dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
 
         <EditText
-            android:id="@+id/editTextText1"
+            android:id="@+id/lastNameEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextText"
+            android:layout_below="@id/firstNameEdit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:hint="Last Name"
+            android:hint="@string/last_name_edit_profile"
             android:inputType="text"
             android:paddingLeft="20dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/phoneNumberEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextText1"
+            android:layout_below="@id/lastNameEdit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
-            android:hint="Phone Number"
+            android:hint="@string/phone_number"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="phone"
             android:paddingLeft="20dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/specialityEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextText2"
+            android:layout_below="@id/phoneNumberEdit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/main"
             android:ems="10"
-            android:hint="Email"
+            android:hint="@string/speciality_edit_profile"
             android:inputType="textEmailAddress"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/skillsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumberEdit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/main"
+            android:ems="10"
+            android:hint="@string/skills"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
 
         <Button
             android:id="@+id/educationBtn"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_below="@id/editTextText3"
+            android:layout_below="@id/specialityEdit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:backgroundTint="#C5D8FF"
-            android:text="Education" />
+            android:text="@string/education" />
+
+
         <Button
-            android:id="@+id/experienceBtn"
-            android:layout_below="@id/educationBtn"
+            android:id="@+id/saveBtn"
+            android:layout_below="@id/skillsEdit"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:backgroundTint="#C5D8FF"
-            android:text="Experience" />
-        <Button
-            android:id="@+id/skillsBtn"
-            android:layout_below="@id/experienceBtn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:backgroundTint="#C5D8FF"
-            android:text="Skills" />
-
-
-
-        <Button
-            android:id="@+id/summaryBtn"
-            android:layout_below="@id/skillsBtn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:backgroundTint="#C5D8FF"
-            android:text="Summary"
+            android:text="@string/save"
             android:layout_marginBottom="40dp"/>
-
-        <Button
-            android:id="@+id/btnChooseFile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/summaryBtn"
-            android:text="Choose PDF File"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
-
-        <Button
-            android:id="@+id/btnDownloadFile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Download PDF File"
-            android:layout_below="@id/btnChooseFile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="90dp"/>
-
 
 
         <ImageView

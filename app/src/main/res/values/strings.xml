@@ -45,4 +45,39 @@
     </string>
     <string name="VistaBee" />
     <string name="password">Password</string>
+    <string name="todo">TODO</string>
+    <string name="speciality">Speciality</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="go_back">Go Back</string>
+    <string name="save">Save</string>
+    <string name="education">Education</string>
+    <string name="skills">Skills</string>
+    <string name="speciality_edit_profile">Speciality</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="last_name_edit_profile">Last Name</string>
+    <string name="first_name_edit_profile">First Name</string>
+
+    <string-array name="specialities">
+        <item>Software</item>
+        <item>Information Systems</item>
+        <item>Automation and Control</item>
+        <item>Drilling of Oil and Gas Wells</item>
+        <item>Mechatronics</item>
+        <item>Oil and Gas Production Technology</item>
+        <item>Chemical Engineering Practice</item>
+        <item>Electricity Supply</item>
+    </string-array>
+    <string-array name="course">
+        <item>23</item>
+        <item>22</item>
+        <item>21</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="groups">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 </resources>
