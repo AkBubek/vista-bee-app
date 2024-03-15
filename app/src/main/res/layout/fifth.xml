@@ -203,10 +203,10 @@
         android:id="@+id/third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/phone"
+        android:layout_below="@+id/imageView9"
+        android:layout_marginTop="78dp"
         android:layout_toStartOf="@id/phoneNumber"
-        android:layout_below="@id/second"
-        android:layout_marginTop="42dp"/>
+        app:srcCompat="@drawable/phone" />
 
     <ImageView
         android:id="@+id/fourth"
@@ -215,7 +215,7 @@
         app:srcCompat="@drawable/message"
         android:layout_toStartOf="@id/email"
         android:layout_below="@id/third"
-        android:layout_marginTop="42dp"/>
+        android:layout_marginTop="44dp"/>
 
     <ImageView
         android:id="@+id/fifth"
@@ -225,5 +225,15 @@
         android:layout_toStartOf="@id/password"
         android:layout_below="@id/fourth"
         android:layout_marginTop="42dp"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/second"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/specialitySpinner"
+        app:srcCompat="@drawable/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
 
 </RelativeLayout>
