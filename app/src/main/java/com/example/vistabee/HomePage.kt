@@ -1,12 +1,9 @@
 package com.example.vistabee
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -73,7 +70,7 @@ class HomePage : AppCompatActivity() {
 
         profilePicture = findViewById(R.id.profileP)
         profilePicture.setOnClickListener {
-            startActivity(Intent(this, ProfilePage::class.java))
+            startActivity(Intent(this, ProfileStatic::class.java))
         }
 
         val imageViewGoogle = findViewById<ImageView>(R.id.imageView21)
@@ -138,17 +135,19 @@ class HomePage : AppCompatActivity() {
                     userProfilePicUrl?.let { url ->
                         Glide.with(this@HomePage)
                             .load(url)
+                            .circleCrop() // Применяем округление к изображению
                             .into(profilePicture)
                     }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-
+                    // Обработка ошибки при загрузке изображения
                     Toast.makeText(this@HomePage, "Failed to load profile image", Toast.LENGTH_SHORT).show()
                 }
             })
         }
     }
+
 
 }
 

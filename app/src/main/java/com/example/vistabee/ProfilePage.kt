@@ -11,6 +11,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -30,6 +31,14 @@ class ProfilePage : AppCompatActivity() {
     private lateinit var currentUser: FirebaseUser
     private lateinit var imageView: ImageView
 
+    private lateinit var summaryEdit : EditText
+    private lateinit var firstNameEdit : EditText
+    private lateinit var lastNameEdit : EditText
+    private lateinit var phoneNumberEdit : EditText
+    private lateinit var specialityEdit : EditText
+    private lateinit var skillsEdit : EditText
+    private lateinit var gpa : EditText
+
     private var storageReference = FirebaseStorage.getInstance().reference
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -48,36 +57,16 @@ class ProfilePage : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         currentUser = firebaseAuth.currentUser ?: return
 
-        val eduBtn = findViewById<Button>(R.id.educationBtn)
-        val expBtn = findViewById<Button>(R.id.experienceBtn)
-        val sklBtn = findViewById<Button>(R.id.skillsBtn)
-        val sumBtn = findViewById<Button>(R.id.summaryBtn)
+        val saveBtn = findViewById<Button>(R.id.saveBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
         val backBtn = findViewById<ImageView>(R.id.backButTonn)
-        val profBtn = findViewById<ImageView>(R.id.profileP)
 
-        eduBtn.setOnClickListener {
-            val intent = Intent(this, EduPage::class.java)
-            startActivity(intent)
-        }
-        expBtn.setOnClickListener {
-            val intent = Intent(this, ExpPage::class.java)
-            startActivity(intent)
-        }
-        sklBtn.setOnClickListener {
-            val intent = Intent(this, SkillsPage::class.java)
-            startActivity(intent)
-        }
-        sumBtn.setOnClickListener {
-            val intent = Intent(this, SummaryPage::class.java)
-            startActivity(intent)
-        }
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
             startActivity(intent)
         }
         backBtn.setOnClickListener {
-            val intent = Intent(this, HomePage::class.java)
+            val intent = Intent(this, ProfileStatic::class.java)
             startActivity(intent)
         }
 
@@ -87,6 +76,58 @@ class ProfilePage : AppCompatActivity() {
         }
 
         loadProfileImage()
+
+        summaryEdit = findViewById(R.id.summaryEdit)
+        firstNameEdit = findViewById(R.id.firstNameEdit)
+        lastNameEdit = findViewById(R.id.lastNameEdit)
+        phoneNumberEdit = findViewById(R.id.phoneNumberEdit)
+        specialityEdit = findViewById(R.id.specialityEdit)
+        skillsEdit = findViewById(R.id.skillsEdit)
+        gpa = findViewById(R.id.gpa)
+
+
+        val databaseRef = FirebaseDatabase.getInstance().getReference("users")
+        val currentUser = firebaseAuth.currentUser
+
+        saveBtn.setOnClickListener {
+            val summary = summaryEdit.text.toString()
+            val firstName = firstNameEdit.text.toString()
+            val lastName = lastNameEdit.text.toString()
+            val phoneNumber = phoneNumberEdit.text.toString()
+            val speciality = specialityEdit.text.toString()
+            val skills = skillsEdit.text.toString()
+            val gpa = gpa.text.toString()
+
+            currentUser?.let { user ->
+                val userId = user.uid
+
+                if (summary.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSummary").setValue(summary)
+                }
+                if (firstName.isNotEmpty()) {
+                    databaseRef.child(userId).child("firstName").setValue(firstName)
+                }
+                if (lastName.isNotEmpty()) {
+                    databaseRef.child(userId).child("lastName").setValue(lastName)
+                }
+                if (phoneNumber.isNotEmpty()) {
+                    databaseRef.child(userId).child("phoneNumber").setValue(phoneNumber)
+                }
+                if (speciality.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSpeciality").setValue(speciality)
+                }
+                if (skills.isNotEmpty()) {
+                    databaseRef.child(userId).child("userSkills").setValue(skills)
+                }
+                if (gpa.isNotEmpty()) {
+                    databaseRef.child(userId).child("userGpa").setValue(gpa)
+                }
+
+            }
+
+            startActivity(Intent(this, ProfileStatic::class.java))
+        }
+
 
     }
 
@@ -136,17 +177,17 @@ class ProfilePage : AppCompatActivity() {
                     userProfilePicUrl?.let { url ->
                         Glide.with(this@ProfilePage)
                             .load(url)
+                            .circleCrop()
                             .into(imageView)
                     }
                 }
-
                 override fun onCancelled(error: DatabaseError) {
-
                     Toast.makeText(this@ProfilePage, "Failed to load profile image", Toast.LENGTH_SHORT).show()
                 }
             })
         }
     }
+
 
 
 
