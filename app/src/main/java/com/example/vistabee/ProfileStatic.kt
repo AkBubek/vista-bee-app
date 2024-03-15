@@ -30,6 +30,9 @@ class ProfileStatic : AppCompatActivity() {
     private lateinit var eduTextView: TextView
     private lateinit var skillsTextView: TextView
 
+    private lateinit var groupTextView: TextView
+    private lateinit var courseTextView: TextView
+
     private lateinit var backBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +50,9 @@ class ProfileStatic : AppCompatActivity() {
         gpaTextView = findViewById(R.id.gpa)
         eduTextView = findViewById(R.id.collegeInfo)
         skillsTextView = findViewById(R.id.skills)
+        groupTextView = findViewById(R.id.group)
+        courseTextView = findViewById(R.id.course)
+
 
         val usersRef = FirebaseDatabase.getInstance().getReference("users").child(currentUser.uid)
         usersRef.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -62,6 +68,8 @@ class ProfileStatic : AppCompatActivity() {
                         gpaTextView.text = it.userGpa
                         eduTextView.text = it.userEdu
                         skillsTextView.text = it.userSkills
+                        groupTextView.text = it.userGroup
+                        courseTextView.text = it.userCourse
                     }
                 } else {
                     Toast.makeText(this@ProfileStatic, "User data not found", Toast.LENGTH_SHORT).show()
