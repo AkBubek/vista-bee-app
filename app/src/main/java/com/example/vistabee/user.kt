@@ -13,4 +13,5 @@ data class User(
     val userCourse:String="",
     val userGroup:String="",
     val userSpeciality:String="",
+    val userCvUrl: String = ""
 )
