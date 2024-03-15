@@ -13,7 +13,7 @@
         android:id="@+id/textView64"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="45dp"
         android:text="UI/UX Designer"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -85,14 +85,14 @@
         android:layout_height="wrap_content"
         android:text="Our clients-are people who want to automate actions in their  field in order to make their task easier, as well as the task for   their employees and clients."
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="270dp"/>
+        android:layout_marginTop="300dp"/>
 
     <TextView
         android:id="@+id/textView73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="380dp"
         android:text="What is needed:"
         android:textSize="16sp"
         android:textStyle="italic" />
@@ -103,14 +103,14 @@
         android:layout_height="wrap_content"
         android:text="-Secondary or higher education;"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"/>
+        android:layout_marginTop="404dp"/>
 
     <TextView
         android:id="@+id/textView75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-1 or 2 years of experience;"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="420dp"
         android:layout_marginLeft="10dp"/>
 
     <TextView
@@ -119,7 +119,7 @@
         android:layout_height="wrap_content"
         android:text="- Resolution of controversial situations;"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="390dp"/>
+        android:layout_marginTop="435dp"/>
 
 
     <TextView
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-Work with the team;"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="450dp"
         android:layout_marginLeft="10dp"/>
 
     <TextView
@@ -136,14 +136,14 @@
         android:layout_height="wrap_content"
         android:text="- Letter of recommendation;"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="427dp"/>
+        android:layout_marginTop="466dp"/>
 
     <TextView
         android:id="@+id/textView78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-Knowledge of Russian, English and Kazakh;"
-        android:layout_marginTop="445dp"
+        android:layout_marginTop="485dp"
         android:layout_marginLeft="11dp"/>
 
     <TextView
@@ -152,14 +152,14 @@
         android:layout_height="wrap_content"
         android:text="-Communication with clients;"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="462dp"/>
+        android:layout_marginTop="502dp"/>
 
     <TextView
         android:id="@+id/textView80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-Ability to adapt quickly."
-        android:layout_marginTop="479dp"
+        android:layout_marginTop="520dp"
         android:layout_marginLeft="10dp"/>
 
     <TextView
@@ -167,8 +167,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="If this vacancy suits you and you have all the conditions to   come here, you must send an application with your resume.  And if you are suitable for us, we will write or call you within   2 weeks. "
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="510dp"/>
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="550dp"/>
 
     <Button
         android:id="@+id/button5"
@@ -176,7 +176,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#3A7BFE"
         android:text="Apply for job"
-        android:layout_marginTop="610dp"
-        android:layout_marginLeft="150dp"/>
+        android:layout_marginTop="690dp"
+        android:layout_marginLeft="100dp"/>
 </RelativeLayout>
 

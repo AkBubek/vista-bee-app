@@ -62,6 +62,12 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val spotbtn = findViewById<ImageView>(R.id.spot)
+        spotbtn.setOnClickListener {
+            val intent = Intent(this, spotify::class.java)
+            startActivity(intent)
+        }
+
         val rembtn = findViewById<ImageView>(R.id.imageViewClick1)
         rembtn.setOnClickListener {
             val intent = Intent(this, Remote1::class.java)

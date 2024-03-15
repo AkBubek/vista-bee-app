@@ -19,6 +19,9 @@
         android:theme="@style/Theme.VistaBee"
         tools:targetApi="31">
         <activity
+            android:name=".spotify"
+            android:exported="false" />
+        <activity
             android:name=".profileStatic"
             android:exported="false" />
         <activity android:name=".ProfilePage" />
@@ -57,7 +60,7 @@
         <activity android:name=".NotificationActivity" />
         <activity android:name=".SuccessActivity" />
         <activity android:name=".FailActivity" />
-        <activity android:name=".ProfileStatic"/>
+        <activity android:name=".ProfileStatic" />
 
         <meta-data
             android:name="preloaded_fonts"
