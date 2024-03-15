@@ -37,6 +37,7 @@ class ProfilePage : AppCompatActivity() {
     private lateinit var phoneNumberEdit : EditText
     private lateinit var specialityEdit : EditText
     private lateinit var skillsEdit : EditText
+    private lateinit var gpa : EditText
 
     private var storageReference = FirebaseStorage.getInstance().reference
     private val resultLauncher =
@@ -56,15 +57,10 @@ class ProfilePage : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         currentUser = firebaseAuth.currentUser ?: return
 
-        val eduBtn = findViewById<Button>(R.id.educationBtn)
         val saveBtn = findViewById<Button>(R.id.saveBtn)
         val setBtn = findViewById<ImageView>(R.id.settingBtn)
         val backBtn = findViewById<ImageView>(R.id.backButTonn)
 
-        eduBtn.setOnClickListener {
-            val intent = Intent(this, EduPage::class.java)
-            startActivity(intent)
-        }
         setBtn.setOnClickListener {
             val intent = Intent(this, SettingPage::class.java)
             startActivity(intent)
@@ -87,7 +83,7 @@ class ProfilePage : AppCompatActivity() {
         phoneNumberEdit = findViewById(R.id.phoneNumberEdit)
         specialityEdit = findViewById(R.id.specialityEdit)
         skillsEdit = findViewById(R.id.skillsEdit)
-
+        gpa = findViewById(R.id.gpa)
 
 
         val databaseRef = FirebaseDatabase.getInstance().getReference("users")
@@ -100,12 +96,13 @@ class ProfilePage : AppCompatActivity() {
             val phoneNumber = phoneNumberEdit.text.toString()
             val speciality = specialityEdit.text.toString()
             val skills = skillsEdit.text.toString()
+            val gpa = gpa.text.toString()
 
             currentUser?.let { user ->
                 val userId = user.uid
 
                 if (summary.isNotEmpty()) {
-                    databaseRef.child(userId).child("userSummarydddddddddddddddddd").setValue(summary)
+                    databaseRef.child(userId).child("userSummary").setValue(summary)
                 }
                 if (firstName.isNotEmpty()) {
                     databaseRef.child(userId).child("firstName").setValue(firstName)
@@ -122,6 +119,10 @@ class ProfilePage : AppCompatActivity() {
                 if (skills.isNotEmpty()) {
                     databaseRef.child(userId).child("userSkills").setValue(skills)
                 }
+                if (gpa.isNotEmpty()) {
+                    databaseRef.child(userId).child("userGpa").setValue(gpa)
+                }
+
             }
 
             startActivity(Intent(this, ProfileStatic::class.java))

@@ -57,6 +57,8 @@
     <string name="phone_number">Phone Number</string>
     <string name="last_name_edit_profile">Last Name</string>
     <string name="first_name_edit_profile">First Name</string>
+    <string name="gpa">gpa</string>
+    <string name="gpaEdit">Gpa</string>
 
     <string-array name="specialities">
         <item>Software</item>

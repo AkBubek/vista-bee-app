@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userNameLayout"
-        android:layout_centerHorizontal="true">
+        >
 
         <TextView
             android:id="@+id/phoneLabel"
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/phoneNumberLayout"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true">
+        >
 
         <TextView
             android:id="@+id/emailLabel"
