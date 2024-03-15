@@ -4,13 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    android:backgroundTint="#FEFEFE"
     tools:context=".spotify">
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="73dp"
+        android:layout_height="67dp"
+        app:srcCompat="@drawable/spo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="135dp" />
+        android:text="Quality Assurance"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="16dp"
+        />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spotify"
+        android:layout_below="@id/textView18"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="43dp"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,16 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VistaBee"
-        tools:targetApi="31">
-<<<<<<< HEAD
+        tools:targetApi="31"
+        tools:ignore="ExtraText">
         <activity
             android:name=".spotify"
             android:exported="false" />
         <activity
             android:name=".profileStatic"
             android:exported="false" />
-=======
->>>>>>> 75f02cacf132aab1055a304dd5338ca747502113
         <activity android:name=".ProfilePage" />
         <activity
             android:name=".Remote1"
